@@ -1,0 +1,905 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CEFA1E6D0BDE00227723 /* AddNote.m */; };
+		05D8CF051E6D0D7100227723 /* PhotoNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF041E6D0D7100227723 /* PhotoNoteView.m */; };
+		05D8CF071E6D0D7B00227723 /* PhotoNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF061E6D0D7B00227723 /* PhotoNoteView.xib */; };
+		05D8CF0A1E6D0D9700227723 /* VideoNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF091E6D0D9700227723 /* VideoNoteView.m */; };
+		05D8CF0C1E6D0DA200227723 /* VideoNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF0B1E6D0DA200227723 /* VideoNoteView.xib */; };
+		05D8CF141E6D131000227723 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF131E6D131000227723 /* PlaceholderTextView.m */; };
+		05D8CF171E6D154700227723 /* WarnNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF161E6D154700227723 /* WarnNoteView.m */; };
+		05D8CF1B1E6D1A7700227723 /* TextNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF191E6D1A7700227723 /* TextNoteCell.m */; };
+		05D8CF1C1E6D1A7700227723 /* TextNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF1A1E6D1A7700227723 /* TextNoteCell.xib */; };
+		05D8CF201E6D2E5400227723 /* PhotoNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF1E1E6D2E5400227723 /* PhotoNoteCell.m */; };
+		05D8CF211E6D2E5400227723 /* PhotoNoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF1F1E6D2E5400227723 /* PhotoNoteCell.xib */; };
+		05D8CF241E6D5BDE00227723 /* ObtainLTWManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF231E6D5BDE00227723 /* ObtainLTWManager.m */; };
+		05D8CF271E6D5E3D00227723 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF261E6D5E3D00227723 /* CoreLocation.framework */; };
+		05D8CF7C1E6D677F00227723 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF7A1E6D677F00227723 /* AMapFoundationKit.framework */; };
+		05D8CF7D1E6D677F00227723 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF7B1E6D677F00227723 /* AMapLocationKit.framework */; };
+		05D8CF7F1E6D679300227723 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF7E1E6D679300227723 /* libz.tbd */; };
+		05D8CF811E6D679C00227723 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF801E6D679C00227723 /* SystemConfiguration.framework */; };
+		05D8CF831E6D67A300227723 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF821E6D67A300227723 /* Security.framework */; };
+		05D8CF851E6D67AC00227723 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF841E6D67AC00227723 /* JavaScriptCore.framework */; };
+		05D8CF881E6D68A000227723 /* ObtainLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF871E6D68A000227723 /* ObtainLocationManager.m */; };
+		05D8CF8A1E6D6AA000227723 /* AddNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF891E6D6AA000227723 /* AddNote.storyboard */; };
+		05D8CF8C1E6D6B5600227723 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF8B1E6D6B5600227723 /* MapKit.framework */; };
+		05D8CF8E1E6D6B9B00227723 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D8CF8D1E6D6B9B00227723 /* CoreTelephony.framework */; };
+		05DDADEB1E6D8ED100443DDB /* MBProgressHUD+YF.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADE81E6D8ED100443DDB /* MBProgressHUD+YF.m */; };
+		05DDADEC1E6D8ED100443DDB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADEA1E6D8ED100443DDB /* MBProgressHUD.m */; };
+		05DDADF01E6D8F7A00443DDB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05DDADEF1E6D8F7A00443DDB /* Login.storyboard */; };
+		05DDADF51E6D8F8800443DDB /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADF21E6D8F8800443DDB /* LoginVC.m */; };
+		05DDADF61E6D8F8800443DDB /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADF41E6D8F8800443DDB /* RegisterVC.m */; };
+		05DDADF91E6D8FA600443DDB /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADF81E6D8FA600443DDB /* LoginManager.m */; };
+		05DDADFC1E6D8FCB00443DDB /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADFB1E6D8FCB00443DDB /* UserDataManager.m */; };
+		05DDAE001E6D929E00443DDB /* BaseTabbarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDADFF1E6D929E00443DDB /* BaseTabbarVC.m */; };
+		05DDAE031E6D95E300443DDB /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE021E6D95E300443DDB /* BmobSDK.framework */; };
+		05DDAE051E6D963A00443DDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE041E6D963A00443DDB /* CoreGraphics.framework */; };
+		05DDAE071E6D964500443DDB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE061E6D964500443DDB /* MobileCoreServices.framework */; };
+		05DDAE091E6D964D00443DDB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE081E6D964D00443DDB /* CFNetwork.framework */; };
+		05DDAE0B1E6D965800443DDB /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE0A1E6D965800443DDB /* libz.1.2.5.tbd */; };
+		05DDAE0D1E6D966100443DDB /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE0C1E6D966100443DDB /* libicucore.tbd */; };
+		05DDAE0F1E6D966900443DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE0E1E6D966900443DDB /* libsqlite3.tbd */; };
+		05DDAE111E6D967200443DDB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE101E6D967200443DDB /* libc++.tbd */; };
+		05DDAE141E6D975C00443DDB /* YFBmobManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDAE131E6D975C00443DDB /* YFBmobManager.m */; };
+		05DDAE161E6D982300443DDB /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DDAE151E6D982300443DDB /* libWeChatSDK.a */; };
+		05DDAE191E6DA11B00443DDB /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05DDAE181E6DA11B00443DDB /* MineVC.m */; };
+		05E6FA8C1E6BDA3D0054E8AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FA8B1E6BDA3D0054E8AE /* main.m */; };
+		05E6FA8F1E6BDA3D0054E8AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FA8E1E6BDA3D0054E8AE /* AppDelegate.m */; };
+		05E6FA951E6BDA3D0054E8AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E6FA931E6BDA3D0054E8AE /* Main.storyboard */; };
+		05E6FA971E6BDA3D0054E8AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E6FA961E6BDA3D0054E8AE /* Assets.xcassets */; };
+		05E6FA9A1E6BDA3D0054E8AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E6FA981E6BDA3D0054E8AE /* LaunchScreen.storyboard */; };
+		05E6FAA51E6BDA3D0054E8AE /* MoodNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FAA41E6BDA3D0054E8AE /* MoodNoteTests.m */; };
+		05E6FAB01E6BDA3D0054E8AE /* MoodNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FAAF1E6BDA3D0054E8AE /* MoodNoteUITests.m */; };
+		05E6FAC61E6BE1AC0054E8AE /* NoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FAC51E6BE1AC0054E8AE /* NoteVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05E6FAA11E6BDA3D0054E8AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E6FA7F1E6BDA3D0054E8AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E6FA861E6BDA3D0054E8AE;
+			remoteInfo = MoodNote;
+		};
+		05E6FAAC1E6BDA3D0054E8AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05E6FA7F1E6BDA3D0054E8AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05E6FA861E6BDA3D0054E8AE;
+			remoteInfo = MoodNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05D8CEF91E6D0BDE00227723 /* AddNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNote.h; sourceTree = "<group>"; };
+		05D8CEFA1E6D0BDE00227723 /* AddNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNote.m; sourceTree = "<group>"; };
+		05D8CF031E6D0D7100227723 /* PhotoNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoNoteView.h; sourceTree = "<group>"; };
+		05D8CF041E6D0D7100227723 /* PhotoNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoNoteView.m; sourceTree = "<group>"; };
+		05D8CF061E6D0D7B00227723 /* PhotoNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoNoteView.xib; sourceTree = "<group>"; };
+		05D8CF081E6D0D9700227723 /* VideoNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoNoteView.h; sourceTree = "<group>"; };
+		05D8CF091E6D0D9700227723 /* VideoNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoNoteView.m; sourceTree = "<group>"; };
+		05D8CF0B1E6D0DA200227723 /* VideoNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoNoteView.xib; sourceTree = "<group>"; };
+		05D8CF121E6D131000227723 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
+		05D8CF131E6D131000227723 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
+		05D8CF151E6D154700227723 /* WarnNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarnNoteView.h; sourceTree = "<group>"; };
+		05D8CF161E6D154700227723 /* WarnNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WarnNoteView.m; sourceTree = "<group>"; };
+		05D8CF181E6D1A7700227723 /* TextNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNoteCell.h; sourceTree = "<group>"; };
+		05D8CF191E6D1A7700227723 /* TextNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNoteCell.m; sourceTree = "<group>"; };
+		05D8CF1A1E6D1A7700227723 /* TextNoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextNoteCell.xib; sourceTree = "<group>"; };
+		05D8CF1D1E6D2E5400227723 /* PhotoNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoNoteCell.h; sourceTree = "<group>"; };
+		05D8CF1E1E6D2E5400227723 /* PhotoNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoNoteCell.m; sourceTree = "<group>"; };
+		05D8CF1F1E6D2E5400227723 /* PhotoNoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoNoteCell.xib; sourceTree = "<group>"; };
+		05D8CF221E6D5BDE00227723 /* ObtainLTWManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObtainLTWManager.h; sourceTree = "<group>"; };
+		05D8CF231E6D5BDE00227723 /* ObtainLTWManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObtainLTWManager.m; sourceTree = "<group>"; };
+		05D8CF261E6D5E3D00227723 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		05D8CF7A1E6D677F00227723 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		05D8CF7B1E6D677F00227723 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
+		05D8CF7E1E6D679300227723 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		05D8CF801E6D679C00227723 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		05D8CF821E6D67A300227723 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		05D8CF841E6D67AC00227723 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		05D8CF861E6D68A000227723 /* ObtainLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObtainLocationManager.h; sourceTree = "<group>"; };
+		05D8CF871E6D68A000227723 /* ObtainLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObtainLocationManager.m; sourceTree = "<group>"; };
+		05D8CF891E6D6AA000227723 /* AddNote.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddNote.storyboard; sourceTree = "<group>"; };
+		05D8CF8B1E6D6B5600227723 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		05D8CF8D1E6D6B9B00227723 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		05DDADE71E6D8ED100443DDB /* MBProgressHUD+YF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YF.h"; sourceTree = "<group>"; };
+		05DDADE81E6D8ED100443DDB /* MBProgressHUD+YF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YF.m"; sourceTree = "<group>"; };
+		05DDADE91E6D8ED100443DDB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		05DDADEA1E6D8ED100443DDB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		05DDADEF1E6D8F7A00443DDB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		05DDADF11E6D8F8800443DDB /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		05DDADF21E6D8F8800443DDB /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		05DDADF31E6D8F8800443DDB /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		05DDADF41E6D8F8800443DDB /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		05DDADF71E6D8FA600443DDB /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		05DDADF81E6D8FA600443DDB /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
+		05DDADFA1E6D8FCB00443DDB /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		05DDADFB1E6D8FCB00443DDB /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
+		05DDADFD1E6D90BE00443DDB /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		05DDADFE1E6D929E00443DDB /* BaseTabbarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabbarVC.h; sourceTree = "<group>"; };
+		05DDADFF1E6D929E00443DDB /* BaseTabbarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabbarVC.m; sourceTree = "<group>"; };
+		05DDAE021E6D95E300443DDB /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
+		05DDAE041E6D963A00443DDB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		05DDAE061E6D964500443DDB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		05DDAE081E6D964D00443DDB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05DDAE0A1E6D965800443DDB /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		05DDAE0C1E6D966100443DDB /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		05DDAE0E1E6D966900443DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		05DDAE101E6D967200443DDB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		05DDAE121E6D975C00443DDB /* YFBmobManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBmobManager.h; sourceTree = "<group>"; };
+		05DDAE131E6D975C00443DDB /* YFBmobManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBmobManager.m; sourceTree = "<group>"; };
+		05DDAE151E6D982300443DDB /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		05DDAE171E6DA11B00443DDB /* MineVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
+		05DDAE181E6DA11B00443DDB /* MineVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
+		05E6FA871E6BDA3D0054E8AE /* MoodNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E6FA8B1E6BDA3D0054E8AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		05E6FA8D1E6BDA3D0054E8AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		05E6FA8E1E6BDA3D0054E8AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		05E6FA941E6BDA3D0054E8AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05E6FA961E6BDA3D0054E8AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		05E6FA991E6BDA3D0054E8AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05E6FA9B1E6BDA3D0054E8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		05E6FAA01E6BDA3D0054E8AE /* MoodNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E6FAA41E6BDA3D0054E8AE /* MoodNoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoodNoteTests.m; sourceTree = "<group>"; };
+		05E6FAA61E6BDA3D0054E8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05E6FAAB1E6BDA3D0054E8AE /* MoodNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E6FAAF1E6BDA3D0054E8AE /* MoodNoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoodNoteUITests.m; sourceTree = "<group>"; };
+		05E6FAB11E6BDA3D0054E8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05E6FAC41E6BE1AC0054E8AE /* NoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteVC.h; sourceTree = "<group>"; };
+		05E6FAC51E6BE1AC0054E8AE /* NoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05E6FA841E6BDA3D0054E8AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D8CF271E6D5E3D00227723 /* CoreLocation.framework in Frameworks */,
+				05DDAE111E6D967200443DDB /* libc++.tbd in Frameworks */,
+				05DDAE161E6D982300443DDB /* libWeChatSDK.a in Frameworks */,
+				05DDAE0F1E6D966900443DDB /* libsqlite3.tbd in Frameworks */,
+				05DDAE0D1E6D966100443DDB /* libicucore.tbd in Frameworks */,
+				05DDAE0B1E6D965800443DDB /* libz.1.2.5.tbd in Frameworks */,
+				05DDAE091E6D964D00443DDB /* CFNetwork.framework in Frameworks */,
+				05DDAE071E6D964500443DDB /* MobileCoreServices.framework in Frameworks */,
+				05DDAE051E6D963A00443DDB /* CoreGraphics.framework in Frameworks */,
+				05D8CF831E6D67A300227723 /* Security.framework in Frameworks */,
+				05D8CF8E1E6D6B9B00227723 /* CoreTelephony.framework in Frameworks */,
+				05D8CF8C1E6D6B5600227723 /* MapKit.framework in Frameworks */,
+				05D8CF851E6D67AC00227723 /* JavaScriptCore.framework in Frameworks */,
+				05D8CF811E6D679C00227723 /* SystemConfiguration.framework in Frameworks */,
+				05D8CF7F1E6D679300227723 /* libz.tbd in Frameworks */,
+				05D8CF7D1E6D677F00227723 /* AMapLocationKit.framework in Frameworks */,
+				05D8CF7C1E6D677F00227723 /* AMapFoundationKit.framework in Frameworks */,
+				05DDAE031E6D95E300443DDB /* BmobSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E6FA9D1E6BDA3D0054E8AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E6FAA81E6BDA3D0054E8AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05D8CF111E6D131000227723 /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				05D8CF121E6D131000227723 /* PlaceholderTextView.h */,
+				05D8CF131E6D131000227723 /* PlaceholderTextView.m */,
+			);
+			path = PlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		05D8CF251E6D5E3D00227723 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05DDAE101E6D967200443DDB /* libc++.tbd */,
+				05DDAE0E1E6D966900443DDB /* libsqlite3.tbd */,
+				05DDAE0C1E6D966100443DDB /* libicucore.tbd */,
+				05DDAE0A1E6D965800443DDB /* libz.1.2.5.tbd */,
+				05DDAE081E6D964D00443DDB /* CFNetwork.framework */,
+				05DDAE061E6D964500443DDB /* MobileCoreServices.framework */,
+				05DDAE041E6D963A00443DDB /* CoreGraphics.framework */,
+				05D8CF8D1E6D6B9B00227723 /* CoreTelephony.framework */,
+				05D8CF8B1E6D6B5600227723 /* MapKit.framework */,
+				05D8CF841E6D67AC00227723 /* JavaScriptCore.framework */,
+				05D8CF821E6D67A300227723 /* Security.framework */,
+				05D8CF801E6D679C00227723 /* SystemConfiguration.framework */,
+				05D8CF7E1E6D679300227723 /* libz.tbd */,
+				05D8CF261E6D5E3D00227723 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		05D8CF281E6D5E7500227723 /* ObtainLocation */ = {
+			isa = PBXGroup;
+			children = (
+				05D8CF7A1E6D677F00227723 /* AMapFoundationKit.framework */,
+				05D8CF7B1E6D677F00227723 /* AMapLocationKit.framework */,
+				05D8CF861E6D68A000227723 /* ObtainLocationManager.h */,
+				05D8CF871E6D68A000227723 /* ObtainLocationManager.m */,
+			);
+			path = ObtainLocation;
+			sourceTree = "<group>";
+		};
+		05DDADE51E6D8E8500443DDB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				05DDADEE1E6D8F3800443DDB /* View */,
+				05DDADED1E6D8F2B00443DDB /* VC */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		05DDADE61E6D8ED100443DDB /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				05DDADE71E6D8ED100443DDB /* MBProgressHUD+YF.h */,
+				05DDADE81E6D8ED100443DDB /* MBProgressHUD+YF.m */,
+				05DDADE91E6D8ED100443DDB /* MBProgressHUD.h */,
+				05DDADEA1E6D8ED100443DDB /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		05DDADED1E6D8F2B00443DDB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				05DDADF11E6D8F8800443DDB /* LoginVC.h */,
+				05DDADF21E6D8F8800443DDB /* LoginVC.m */,
+				05DDADF31E6D8F8800443DDB /* RegisterVC.h */,
+				05DDADF41E6D8F8800443DDB /* RegisterVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		05DDADEE1E6D8F3800443DDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05DDADEF1E6D8F7A00443DDB /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05DDAE011E6D95D200443DDB /* Bmob */ = {
+			isa = PBXGroup;
+			children = (
+				05DDAE151E6D982300443DDB /* libWeChatSDK.a */,
+				05DDAE021E6D95E300443DDB /* BmobSDK.framework */,
+				05DDAE121E6D975C00443DDB /* YFBmobManager.h */,
+				05DDAE131E6D975C00443DDB /* YFBmobManager.m */,
+			);
+			path = Bmob;
+			sourceTree = "<group>";
+		};
+		05E6FA7E1E6BDA3D0054E8AE = {
+			isa = PBXGroup;
+			children = (
+				05E6FA891E6BDA3D0054E8AE /* MoodNote */,
+				05E6FAA31E6BDA3D0054E8AE /* MoodNoteTests */,
+				05E6FAAE1E6BDA3D0054E8AE /* MoodNoteUITests */,
+				05E6FA881E6BDA3D0054E8AE /* Products */,
+				05D8CF251E6D5E3D00227723 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05E6FA881E6BDA3D0054E8AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FA871E6BDA3D0054E8AE /* MoodNote.app */,
+				05E6FAA01E6BDA3D0054E8AE /* MoodNoteTests.xctest */,
+				05E6FAAB1E6BDA3D0054E8AE /* MoodNoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05E6FA891E6BDA3D0054E8AE /* MoodNote */ = {
+			isa = PBXGroup;
+			children = (
+				05DDADE51E6D8E8500443DDB /* Login */,
+				05E6FAC21E6BE1070054E8AE /* ThridSDK */,
+				05E6FAC11E6BE0FE0054E8AE /* Other */,
+				05E6FAC01E6BE0F40054E8AE /* Base */,
+				05E6FABF1E6BE0C30054E8AE /* Mine */,
+				05E6FABE1E6BE0BA0054E8AE /* Share */,
+				05E6FABD1E6BE0A70054E8AE /* Note */,
+				05E6FA8A1E6BDA3D0054E8AE /* Supporting Files */,
+			);
+			path = MoodNote;
+			sourceTree = "<group>";
+		};
+		05E6FA8A1E6BDA3D0054E8AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FA8B1E6BDA3D0054E8AE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05E6FAA31E6BDA3D0054E8AE /* MoodNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FAA41E6BDA3D0054E8AE /* MoodNoteTests.m */,
+				05E6FAA61E6BDA3D0054E8AE /* Info.plist */,
+			);
+			path = MoodNoteTests;
+			sourceTree = "<group>";
+		};
+		05E6FAAE1E6BDA3D0054E8AE /* MoodNoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FAAF1E6BDA3D0054E8AE /* MoodNoteUITests.m */,
+				05E6FAB11E6BDA3D0054E8AE /* Info.plist */,
+			);
+			path = MoodNoteUITests;
+			sourceTree = "<group>";
+		};
+		05E6FABD1E6BE0A70054E8AE /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FAC71E6BE3C50054E8AE /* View */,
+				05E6FAC31E6BE1970054E8AE /* VC */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		05E6FABE1E6BE0BA0054E8AE /* Share */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		05E6FABF1E6BE0C30054E8AE /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				05DDAE171E6DA11B00443DDB /* MineVC.h */,
+				05DDAE181E6DA11B00443DDB /* MineVC.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		05E6FAC01E6BE0F40054E8AE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				05DDADF71E6D8FA600443DDB /* LoginManager.h */,
+				05DDADF81E6D8FA600443DDB /* LoginManager.m */,
+				05E6FA931E6BDA3D0054E8AE /* Main.storyboard */,
+				05E6FA8D1E6BDA3D0054E8AE /* AppDelegate.h */,
+				05E6FA8E1E6BDA3D0054E8AE /* AppDelegate.m */,
+				05D8CF221E6D5BDE00227723 /* ObtainLTWManager.h */,
+				05D8CF231E6D5BDE00227723 /* ObtainLTWManager.m */,
+				05DDADFA1E6D8FCB00443DDB /* UserDataManager.h */,
+				05DDADFB1E6D8FCB00443DDB /* UserDataManager.m */,
+				05DDADFD1E6D90BE00443DDB /* Prefix.pch */,
+				05DDADFE1E6D929E00443DDB /* BaseTabbarVC.h */,
+				05DDADFF1E6D929E00443DDB /* BaseTabbarVC.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		05E6FAC11E6BE0FE0054E8AE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FA961E6BDA3D0054E8AE /* Assets.xcassets */,
+				05E6FA981E6BDA3D0054E8AE /* LaunchScreen.storyboard */,
+				05E6FA9B1E6BDA3D0054E8AE /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		05E6FAC21E6BE1070054E8AE /* ThridSDK */ = {
+			isa = PBXGroup;
+			children = (
+				05DDAE011E6D95D200443DDB /* Bmob */,
+				05DDADE61E6D8ED100443DDB /* MBProgressHUD */,
+				05D8CF281E6D5E7500227723 /* ObtainLocation */,
+				05D8CF111E6D131000227723 /* PlaceholderTextView */,
+			);
+			path = ThridSDK;
+			sourceTree = "<group>";
+		};
+		05E6FAC31E6BE1970054E8AE /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				05E6FAC41E6BE1AC0054E8AE /* NoteVC.h */,
+				05E6FAC51E6BE1AC0054E8AE /* NoteVC.m */,
+				05D8CEF91E6D0BDE00227723 /* AddNote.h */,
+				05D8CEFA1E6D0BDE00227723 /* AddNote.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		05E6FAC71E6BE3C50054E8AE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05D8CF891E6D6AA000227723 /* AddNote.storyboard */,
+				05D8CF031E6D0D7100227723 /* PhotoNoteView.h */,
+				05D8CF041E6D0D7100227723 /* PhotoNoteView.m */,
+				05D8CF061E6D0D7B00227723 /* PhotoNoteView.xib */,
+				05D8CF081E6D0D9700227723 /* VideoNoteView.h */,
+				05D8CF091E6D0D9700227723 /* VideoNoteView.m */,
+				05D8CF0B1E6D0DA200227723 /* VideoNoteView.xib */,
+				05D8CF151E6D154700227723 /* WarnNoteView.h */,
+				05D8CF161E6D154700227723 /* WarnNoteView.m */,
+				05D8CF181E6D1A7700227723 /* TextNoteCell.h */,
+				05D8CF191E6D1A7700227723 /* TextNoteCell.m */,
+				05D8CF1A1E6D1A7700227723 /* TextNoteCell.xib */,
+				05D8CF1D1E6D2E5400227723 /* PhotoNoteCell.h */,
+				05D8CF1E1E6D2E5400227723 /* PhotoNoteCell.m */,
+				05D8CF1F1E6D2E5400227723 /* PhotoNoteCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05E6FA861E6BDA3D0054E8AE /* MoodNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E6FAB41E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNote" */;
+			buildPhases = (
+				05E6FA831E6BDA3D0054E8AE /* Sources */,
+				05E6FA841E6BDA3D0054E8AE /* Frameworks */,
+				05E6FA851E6BDA3D0054E8AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoodNote;
+			productName = MoodNote;
+			productReference = 05E6FA871E6BDA3D0054E8AE /* MoodNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05E6FA9F1E6BDA3D0054E8AE /* MoodNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E6FAB71E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNoteTests" */;
+			buildPhases = (
+				05E6FA9C1E6BDA3D0054E8AE /* Sources */,
+				05E6FA9D1E6BDA3D0054E8AE /* Frameworks */,
+				05E6FA9E1E6BDA3D0054E8AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05E6FAA21E6BDA3D0054E8AE /* PBXTargetDependency */,
+			);
+			name = MoodNoteTests;
+			productName = MoodNoteTests;
+			productReference = 05E6FAA01E6BDA3D0054E8AE /* MoodNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05E6FAAA1E6BDA3D0054E8AE /* MoodNoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05E6FABA1E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNoteUITests" */;
+			buildPhases = (
+				05E6FAA71E6BDA3D0054E8AE /* Sources */,
+				05E6FAA81E6BDA3D0054E8AE /* Frameworks */,
+				05E6FAA91E6BDA3D0054E8AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05E6FAAD1E6BDA3D0054E8AE /* PBXTargetDependency */,
+			);
+			name = MoodNoteUITests;
+			productName = MoodNoteUITests;
+			productReference = 05E6FAAB1E6BDA3D0054E8AE /* MoodNoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05E6FA7F1E6BDA3D0054E8AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "孙云飞";
+				TargetAttributes = {
+					05E6FA861E6BDA3D0054E8AE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7DBWPU265V;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					05E6FA9F1E6BDA3D0054E8AE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7DBWPU265V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 05E6FA861E6BDA3D0054E8AE;
+					};
+					05E6FAAA1E6BDA3D0054E8AE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7DBWPU265V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 05E6FA861E6BDA3D0054E8AE;
+					};
+				};
+			};
+			buildConfigurationList = 05E6FA821E6BDA3D0054E8AE /* Build configuration list for PBXProject "MoodNote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05E6FA7E1E6BDA3D0054E8AE;
+			productRefGroup = 05E6FA881E6BDA3D0054E8AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05E6FA861E6BDA3D0054E8AE /* MoodNote */,
+				05E6FA9F1E6BDA3D0054E8AE /* MoodNoteTests */,
+				05E6FAAA1E6BDA3D0054E8AE /* MoodNoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05E6FA851E6BDA3D0054E8AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D8CF8A1E6D6AA000227723 /* AddNote.storyboard in Resources */,
+				05D8CF0C1E6D0DA200227723 /* VideoNoteView.xib in Resources */,
+				05E6FA9A1E6BDA3D0054E8AE /* LaunchScreen.storyboard in Resources */,
+				05D8CF211E6D2E5400227723 /* PhotoNoteCell.xib in Resources */,
+				05E6FA971E6BDA3D0054E8AE /* Assets.xcassets in Resources */,
+				05D8CF1C1E6D1A7700227723 /* TextNoteCell.xib in Resources */,
+				05E6FA951E6BDA3D0054E8AE /* Main.storyboard in Resources */,
+				05D8CF071E6D0D7B00227723 /* PhotoNoteView.xib in Resources */,
+				05DDADF01E6D8F7A00443DDB /* Login.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E6FA9E1E6BDA3D0054E8AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E6FAA91E6BDA3D0054E8AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05E6FA831E6BDA3D0054E8AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E6FAC61E6BE1AC0054E8AE /* NoteVC.m in Sources */,
+				05E6FA8F1E6BDA3D0054E8AE /* AppDelegate.m in Sources */,
+				05DDADF51E6D8F8800443DDB /* LoginVC.m in Sources */,
+				05D8CF171E6D154700227723 /* WarnNoteView.m in Sources */,
+				05D8CF201E6D2E5400227723 /* PhotoNoteCell.m in Sources */,
+				05DDADF61E6D8F8800443DDB /* RegisterVC.m in Sources */,
+				05DDADFC1E6D8FCB00443DDB /* UserDataManager.m in Sources */,
+				05D8CF141E6D131000227723 /* PlaceholderTextView.m in Sources */,
+				05DDADF91E6D8FA600443DDB /* LoginManager.m in Sources */,
+				05DDAE001E6D929E00443DDB /* BaseTabbarVC.m in Sources */,
+				05DDADEB1E6D8ED100443DDB /* MBProgressHUD+YF.m in Sources */,
+				05DDAE141E6D975C00443DDB /* YFBmobManager.m in Sources */,
+				05DDAE191E6DA11B00443DDB /* MineVC.m in Sources */,
+				05E6FA8C1E6BDA3D0054E8AE /* main.m in Sources */,
+				05D8CF1B1E6D1A7700227723 /* TextNoteCell.m in Sources */,
+				05D8CF241E6D5BDE00227723 /* ObtainLTWManager.m in Sources */,
+				05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */,
+				05D8CF051E6D0D7100227723 /* PhotoNoteView.m in Sources */,
+				05D8CF881E6D68A000227723 /* ObtainLocationManager.m in Sources */,
+				05D8CF0A1E6D0D9700227723 /* VideoNoteView.m in Sources */,
+				05DDADEC1E6D8ED100443DDB /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E6FA9C1E6BDA3D0054E8AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E6FAA51E6BDA3D0054E8AE /* MoodNoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05E6FAA71E6BDA3D0054E8AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05E6FAB01E6BDA3D0054E8AE /* MoodNoteUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05E6FAA21E6BDA3D0054E8AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E6FA861E6BDA3D0054E8AE /* MoodNote */;
+			targetProxy = 05E6FAA11E6BDA3D0054E8AE /* PBXContainerItemProxy */;
+		};
+		05E6FAAD1E6BDA3D0054E8AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05E6FA861E6BDA3D0054E8AE /* MoodNote */;
+			targetProxy = 05E6FAAC1E6BDA3D0054E8AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05E6FA931E6BDA3D0054E8AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05E6FA941E6BDA3D0054E8AE /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		05E6FA981E6BDA3D0054E8AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05E6FA991E6BDA3D0054E8AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05E6FAB21E6BDA3D0054E8AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		05E6FAB31E6BDA3D0054E8AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05E6FAB51E6BDA3D0054E8AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7DBWPU265V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoodNote/ThridSDK/ObtainLocation",
+					"$(PROJECT_DIR)/MoodNote/ThridSDK/Bmob",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/syf/Desktop/有用的/随心笔记/MoodNote/MoodNote/Base/Prefix.pch";
+				INFOPLIST_FILE = MoodNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoodNote/ThridSDK/Bmob",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.map;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05E6FAB61E6BDA3D0054E8AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7DBWPU265V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoodNote/ThridSDK/ObtainLocation",
+					"$(PROJECT_DIR)/MoodNote/ThridSDK/Bmob",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/syf/Desktop/有用的/随心笔记/MoodNote/MoodNote/Base/Prefix.pch";
+				INFOPLIST_FILE = MoodNote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoodNote/ThridSDK/Bmob",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.map;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		05E6FAB81E6BDA3D0054E8AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7DBWPU265V;
+				INFOPLIST_FILE = MoodNoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haidai.MoodNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodNote.app/MoodNote";
+			};
+			name = Debug;
+		};
+		05E6FAB91E6BDA3D0054E8AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7DBWPU265V;
+				INFOPLIST_FILE = MoodNoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haidai.MoodNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoodNote.app/MoodNote";
+			};
+			name = Release;
+		};
+		05E6FABB1E6BDA3D0054E8AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7DBWPU265V;
+				INFOPLIST_FILE = MoodNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haidai.MoodNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MoodNote;
+			};
+			name = Debug;
+		};
+		05E6FABC1E6BDA3D0054E8AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7DBWPU265V;
+				INFOPLIST_FILE = MoodNoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haidai.MoodNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MoodNote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05E6FA821E6BDA3D0054E8AE /* Build configuration list for PBXProject "MoodNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E6FAB21E6BDA3D0054E8AE /* Debug */,
+				05E6FAB31E6BDA3D0054E8AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05E6FAB41E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E6FAB51E6BDA3D0054E8AE /* Debug */,
+				05E6FAB61E6BDA3D0054E8AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05E6FAB71E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E6FAB81E6BDA3D0054E8AE /* Debug */,
+				05E6FAB91E6BDA3D0054E8AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05E6FABA1E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05E6FABB1E6BDA3D0054E8AE /* Debug */,
+				05E6FABC1E6BDA3D0054E8AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05E6FA7F1E6BDA3D0054E8AE /* Project object */;
+}
