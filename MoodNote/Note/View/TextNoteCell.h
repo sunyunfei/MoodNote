@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NoteModel.h"
 @interface TextNoteCell : UITableViewCell
-
+@property(nonatomic,strong)NoteModel *model;//数据
 @end

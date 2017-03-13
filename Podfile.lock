@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManager (4.0.8)
+  - MJRefresh (3.1.12)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - MJRefresh
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+
+PODFILE CHECKSUM: 3fc84334a2d254bd4666ec3994b202d22e594ebb
+
+COCOAPODS: 1.1.1

@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05AF09111E6F913C00239919 /* PhotoShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AF09101E6F913C00239919 /* PhotoShowManager.m */; };
+		05AF09151E6F948000239919 /* NoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AF09141E6F948000239919 /* NoteModel.m */; };
 		05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CEFA1E6D0BDE00227723 /* AddNote.m */; };
-		05D8CF051E6D0D7100227723 /* PhotoNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF041E6D0D7100227723 /* PhotoNoteView.m */; };
-		05D8CF071E6D0D7B00227723 /* PhotoNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF061E6D0D7B00227723 /* PhotoNoteView.xib */; };
-		05D8CF0A1E6D0D9700227723 /* VideoNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF091E6D0D9700227723 /* VideoNoteView.m */; };
-		05D8CF0C1E6D0DA200227723 /* VideoNoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05D8CF0B1E6D0DA200227723 /* VideoNoteView.xib */; };
 		05D8CF141E6D131000227723 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF131E6D131000227723 /* PlaceholderTextView.m */; };
 		05D8CF171E6D154700227723 /* WarnNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF161E6D154700227723 /* WarnNoteView.m */; };
 		05D8CF1B1E6D1A7700227723 /* TextNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF191E6D1A7700227723 /* TextNoteCell.m */; };
@@ -57,6 +55,23 @@
 		05E6FAA51E6BDA3D0054E8AE /* MoodNoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FAA41E6BDA3D0054E8AE /* MoodNoteTests.m */; };
 		05E6FAB01E6BDA3D0054E8AE /* MoodNoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FAAF1E6BDA3D0054E8AE /* MoodNoteUITests.m */; };
 		05E6FAC61E6BE1AC0054E8AE /* NoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E6FAC51E6BE1AC0054E8AE /* NoteVC.m */; };
+		05F141EA1E716F04003BB37A /* ShowNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F141E91E716F04003BB37A /* ShowNoteVC.m */; };
+		05FFA2371E751B3D00E87806 /* ShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2361E751B3D00E87806 /* ShareVC.m */; };
+		05FFA23B1E751D6F00E87806 /* CreateShareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA23A1E751D6F00E87806 /* CreateShareVC.m */; };
+		05FFA23D1E751D9A00E87806 /* CreateShareVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FFA23C1E751D9A00E87806 /* CreateShareVC.storyboard */; };
+		05FFA2411E752E2E00E87806 /* CreateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA23F1E752E2E00E87806 /* CreateCell.m */; };
+		05FFA2421E752E2E00E87806 /* CreateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FFA2401E752E2E00E87806 /* CreateCell.xib */; };
+		05FFA2981E75342500E87806 /* YFShowGroupAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA28C1E75342500E87806 /* YFShowGroupAlbumVC.m */; };
+		05FFA2991E75342500E87806 /* YFShowAlbumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA28E1E75342500E87806 /* YFShowAlbumVC.m */; };
+		05FFA29A1E75342500E87806 /* YFShowAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2901E75342500E87806 /* YFShowAlbumCell.m */; };
+		05FFA29B1E75342500E87806 /* YFShowAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FFA2911E75342500E87806 /* YFShowAlbumCell.xib */; };
+		05FFA29C1E75342500E87806 /* YFSelfImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2931E75342500E87806 /* YFSelfImage.m */; };
+		05FFA29D1E75342500E87806 /* NSObject+YFPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2951E75342500E87806 /* NSObject+YFPhoto.m */; };
+		05FFA29E1E75342500E87806 /* ALAssetsLibrary+YF.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2971E75342500E87806 /* ALAssetsLibrary+YF.m */; };
+		05FFA2A41E75377F00E87806 /* EvaluatePhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2A01E75377F00E87806 /* EvaluatePhotoView.m */; };
+		05FFA2A51E75377F00E87806 /* EvaluatePhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FFA2A21E75377F00E87806 /* EvaluatePhotoCell.m */; };
+		05FFA2A61E75377F00E87806 /* EvaluatePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FFA2A31E75377F00E87806 /* EvaluatePhotoCell.xib */; };
+		1D963C8A03F07F76C7809EA1 /* Pods_MoodNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D1FF4BFA0353AEC511B8434 /* Pods_MoodNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,14 +92,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05AF090F1E6F913C00239919 /* PhotoShowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShowManager.h; sourceTree = "<group>"; };
+		05AF09101E6F913C00239919 /* PhotoShowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShowManager.m; sourceTree = "<group>"; };
+		05AF09131E6F948000239919 /* NoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteModel.h; sourceTree = "<group>"; };
+		05AF09141E6F948000239919 /* NoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteModel.m; sourceTree = "<group>"; };
 		05D8CEF91E6D0BDE00227723 /* AddNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNote.h; sourceTree = "<group>"; };
 		05D8CEFA1E6D0BDE00227723 /* AddNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNote.m; sourceTree = "<group>"; };
-		05D8CF031E6D0D7100227723 /* PhotoNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoNoteView.h; sourceTree = "<group>"; };
-		05D8CF041E6D0D7100227723 /* PhotoNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoNoteView.m; sourceTree = "<group>"; };
-		05D8CF061E6D0D7B00227723 /* PhotoNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoNoteView.xib; sourceTree = "<group>"; };
-		05D8CF081E6D0D9700227723 /* VideoNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoNoteView.h; sourceTree = "<group>"; };
-		05D8CF091E6D0D9700227723 /* VideoNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoNoteView.m; sourceTree = "<group>"; };
-		05D8CF0B1E6D0DA200227723 /* VideoNoteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoNoteView.xib; sourceTree = "<group>"; };
 		05D8CF121E6D131000227723 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
 		05D8CF131E6D131000227723 /* PlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceholderTextView.m; sourceTree = "<group>"; };
 		05D8CF151E6D154700227723 /* WarnNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WarnNoteView.h; sourceTree = "<group>"; };
@@ -154,6 +167,37 @@
 		05E6FAB11E6BDA3D0054E8AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05E6FAC41E6BE1AC0054E8AE /* NoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteVC.h; sourceTree = "<group>"; };
 		05E6FAC51E6BE1AC0054E8AE /* NoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteVC.m; sourceTree = "<group>"; };
+		05F141E81E716F04003BB37A /* ShowNoteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNoteVC.h; sourceTree = "<group>"; };
+		05F141E91E716F04003BB37A /* ShowNoteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNoteVC.m; sourceTree = "<group>"; };
+		05FFA2351E751B3D00E87806 /* ShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareVC.h; sourceTree = "<group>"; };
+		05FFA2361E751B3D00E87806 /* ShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareVC.m; sourceTree = "<group>"; };
+		05FFA2391E751D6F00E87806 /* CreateShareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateShareVC.h; sourceTree = "<group>"; };
+		05FFA23A1E751D6F00E87806 /* CreateShareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateShareVC.m; sourceTree = "<group>"; };
+		05FFA23C1E751D9A00E87806 /* CreateShareVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateShareVC.storyboard; sourceTree = "<group>"; };
+		05FFA23E1E752E2E00E87806 /* CreateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCell.h; sourceTree = "<group>"; };
+		05FFA23F1E752E2E00E87806 /* CreateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCell.m; sourceTree = "<group>"; };
+		05FFA2401E752E2E00E87806 /* CreateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateCell.xib; sourceTree = "<group>"; };
+		05FFA28B1E75342500E87806 /* YFShowGroupAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFShowGroupAlbumVC.h; sourceTree = "<group>"; };
+		05FFA28C1E75342500E87806 /* YFShowGroupAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFShowGroupAlbumVC.m; sourceTree = "<group>"; };
+		05FFA28D1E75342500E87806 /* YFShowAlbumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFShowAlbumVC.h; sourceTree = "<group>"; };
+		05FFA28E1E75342500E87806 /* YFShowAlbumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFShowAlbumVC.m; sourceTree = "<group>"; };
+		05FFA28F1E75342500E87806 /* YFShowAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFShowAlbumCell.h; sourceTree = "<group>"; };
+		05FFA2901E75342500E87806 /* YFShowAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFShowAlbumCell.m; sourceTree = "<group>"; };
+		05FFA2911E75342500E87806 /* YFShowAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFShowAlbumCell.xib; sourceTree = "<group>"; };
+		05FFA2921E75342500E87806 /* YFSelfImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFSelfImage.h; sourceTree = "<group>"; };
+		05FFA2931E75342500E87806 /* YFSelfImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFSelfImage.m; sourceTree = "<group>"; };
+		05FFA2941E75342500E87806 /* NSObject+YFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YFPhoto.h"; sourceTree = "<group>"; };
+		05FFA2951E75342500E87806 /* NSObject+YFPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YFPhoto.m"; sourceTree = "<group>"; };
+		05FFA2961E75342500E87806 /* ALAssetsLibrary+YF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+YF.h"; sourceTree = "<group>"; };
+		05FFA2971E75342500E87806 /* ALAssetsLibrary+YF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+YF.m"; sourceTree = "<group>"; };
+		05FFA29F1E75377F00E87806 /* EvaluatePhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluatePhotoView.h; sourceTree = "<group>"; };
+		05FFA2A01E75377F00E87806 /* EvaluatePhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluatePhotoView.m; sourceTree = "<group>"; };
+		05FFA2A11E75377F00E87806 /* EvaluatePhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvaluatePhotoCell.h; sourceTree = "<group>"; };
+		05FFA2A21E75377F00E87806 /* EvaluatePhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EvaluatePhotoCell.m; sourceTree = "<group>"; };
+		05FFA2A31E75377F00E87806 /* EvaluatePhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EvaluatePhotoCell.xib; sourceTree = "<group>"; };
+		5D1FF4BFA0353AEC511B8434 /* Pods_MoodNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		905F7E595065BCF699E13208 /* Pods-MoodNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodNote/Pods-MoodNote.debug.xcconfig"; sourceTree = "<group>"; };
+		ABABBF1C0C7A0105E6286E35 /* Pods-MoodNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodNote/Pods-MoodNote.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DDAE071E6D964500443DDB /* MobileCoreServices.framework in Frameworks */,
 				05D8CF271E6D5E3D00227723 /* CoreLocation.framework in Frameworks */,
 				05DDAE111E6D967200443DDB /* libc++.tbd in Frameworks */,
 				05DDAE161E6D982300443DDB /* libWeChatSDK.a in Frameworks */,
@@ -168,7 +213,6 @@
 				05DDAE0D1E6D966100443DDB /* libicucore.tbd in Frameworks */,
 				05DDAE0B1E6D965800443DDB /* libz.1.2.5.tbd in Frameworks */,
 				05DDAE091E6D964D00443DDB /* CFNetwork.framework in Frameworks */,
-				05DDAE071E6D964500443DDB /* MobileCoreServices.framework in Frameworks */,
 				05DDAE051E6D963A00443DDB /* CoreGraphics.framework in Frameworks */,
 				05D8CF831E6D67A300227723 /* Security.framework in Frameworks */,
 				05D8CF8E1E6D6B9B00227723 /* CoreTelephony.framework in Frameworks */,
@@ -179,6 +223,7 @@
 				05D8CF7D1E6D677F00227723 /* AMapLocationKit.framework in Frameworks */,
 				05D8CF7C1E6D677F00227723 /* AMapFoundationKit.framework in Frameworks */,
 				05DDAE031E6D95E300443DDB /* BmobSDK.framework in Frameworks */,
+				1D963C8A03F07F76C7809EA1 /* Pods_MoodNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +244,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05AF090E1E6F912600239919 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				05AF090F1E6F913C00239919 /* PhotoShowManager.h */,
+				05AF09101E6F913C00239919 /* PhotoShowManager.m */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		05AF09121E6F946D00239919 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05AF09131E6F948000239919 /* NoteModel.h */,
+				05AF09141E6F948000239919 /* NoteModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		05D8CF111E6D131000227723 /* PlaceholderTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +288,7 @@
 				05D8CF801E6D679C00227723 /* SystemConfiguration.framework */,
 				05D8CF7E1E6D679300227723 /* libz.tbd */,
 				05D8CF261E6D5E3D00227723 /* CoreLocation.framework */,
+				5D1FF4BFA0353AEC511B8434 /* Pods_MoodNote.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,6 +362,7 @@
 				05E6FAAE1E6BDA3D0054E8AE /* MoodNoteUITests */,
 				05E6FA881E6BDA3D0054E8AE /* Products */,
 				05D8CF251E6D5E3D00227723 /* Frameworks */,
+				75FA7068DDAAB88DE62DF805 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -355,6 +420,7 @@
 		05E6FABD1E6BE0A70054E8AE /* Note */ = {
 			isa = PBXGroup;
 			children = (
+				05AF09121E6F946D00239919 /* Model */,
 				05E6FAC71E6BE3C50054E8AE /* View */,
 				05E6FAC31E6BE1970054E8AE /* VC */,
 			);
@@ -364,6 +430,12 @@
 		05E6FABE1E6BE0BA0054E8AE /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				05FFA2381E751D2100E87806 /* View */,
+				05FFA2351E751B3D00E87806 /* ShareVC.h */,
+				05FFA2361E751B3D00E87806 /* ShareVC.m */,
+				05FFA2391E751D6F00E87806 /* CreateShareVC.h */,
+				05FFA23A1E751D6F00E87806 /* CreateShareVC.m */,
+				05FFA23C1E751D9A00E87806 /* CreateShareVC.storyboard */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -409,6 +481,8 @@
 		05E6FAC21E6BE1070054E8AE /* ThridSDK */ = {
 			isa = PBXGroup;
 			children = (
+				05FFA28A1E75341100E87806 /* YFPhoto */,
+				05AF090E1E6F912600239919 /* Photo */,
 				05DDAE011E6D95D200443DDB /* Bmob */,
 				05DDADE61E6D8ED100443DDB /* MBProgressHUD */,
 				05D8CF281E6D5E7500227723 /* ObtainLocation */,
@@ -424,6 +498,8 @@
 				05E6FAC51E6BE1AC0054E8AE /* NoteVC.m */,
 				05D8CEF91E6D0BDE00227723 /* AddNote.h */,
 				05D8CEFA1E6D0BDE00227723 /* AddNote.m */,
+				05F141E81E716F04003BB37A /* ShowNoteVC.h */,
+				05F141E91E716F04003BB37A /* ShowNoteVC.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -432,12 +508,6 @@
 			isa = PBXGroup;
 			children = (
 				05D8CF891E6D6AA000227723 /* AddNote.storyboard */,
-				05D8CF031E6D0D7100227723 /* PhotoNoteView.h */,
-				05D8CF041E6D0D7100227723 /* PhotoNoteView.m */,
-				05D8CF061E6D0D7B00227723 /* PhotoNoteView.xib */,
-				05D8CF081E6D0D9700227723 /* VideoNoteView.h */,
-				05D8CF091E6D0D9700227723 /* VideoNoteView.m */,
-				05D8CF0B1E6D0DA200227723 /* VideoNoteView.xib */,
 				05D8CF151E6D154700227723 /* WarnNoteView.h */,
 				05D8CF161E6D154700227723 /* WarnNoteView.m */,
 				05D8CF181E6D1A7700227723 /* TextNoteCell.h */,
@@ -450,6 +520,50 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		05FFA2381E751D2100E87806 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05FFA23E1E752E2E00E87806 /* CreateCell.h */,
+				05FFA23F1E752E2E00E87806 /* CreateCell.m */,
+				05FFA2401E752E2E00E87806 /* CreateCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05FFA28A1E75341100E87806 /* YFPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				05FFA29F1E75377F00E87806 /* EvaluatePhotoView.h */,
+				05FFA2A01E75377F00E87806 /* EvaluatePhotoView.m */,
+				05FFA2A11E75377F00E87806 /* EvaluatePhotoCell.h */,
+				05FFA2A21E75377F00E87806 /* EvaluatePhotoCell.m */,
+				05FFA2A31E75377F00E87806 /* EvaluatePhotoCell.xib */,
+				05FFA28B1E75342500E87806 /* YFShowGroupAlbumVC.h */,
+				05FFA28C1E75342500E87806 /* YFShowGroupAlbumVC.m */,
+				05FFA28D1E75342500E87806 /* YFShowAlbumVC.h */,
+				05FFA28E1E75342500E87806 /* YFShowAlbumVC.m */,
+				05FFA28F1E75342500E87806 /* YFShowAlbumCell.h */,
+				05FFA2901E75342500E87806 /* YFShowAlbumCell.m */,
+				05FFA2911E75342500E87806 /* YFShowAlbumCell.xib */,
+				05FFA2921E75342500E87806 /* YFSelfImage.h */,
+				05FFA2931E75342500E87806 /* YFSelfImage.m */,
+				05FFA2941E75342500E87806 /* NSObject+YFPhoto.h */,
+				05FFA2951E75342500E87806 /* NSObject+YFPhoto.m */,
+				05FFA2961E75342500E87806 /* ALAssetsLibrary+YF.h */,
+				05FFA2971E75342500E87806 /* ALAssetsLibrary+YF.m */,
+			);
+			path = YFPhoto;
+			sourceTree = "<group>";
+		};
+		75FA7068DDAAB88DE62DF805 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				905F7E595065BCF699E13208 /* Pods-MoodNote.debug.xcconfig */,
+				ABABBF1C0C7A0105E6286E35 /* Pods-MoodNote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,9 +571,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E6FAB41E6BDA3D0054E8AE /* Build configuration list for PBXNativeTarget "MoodNote" */;
 			buildPhases = (
+				173B639F647920A9A5410B8A /* [CP] Check Pods Manifest.lock */,
 				05E6FA831E6BDA3D0054E8AE /* Sources */,
 				05E6FA841E6BDA3D0054E8AE /* Frameworks */,
 				05E6FA851E6BDA3D0054E8AE /* Resources */,
+				414E6949EC7B811031F4B0E6 /* [CP] Embed Pods Frameworks */,
+				25947039E70F293D0C7223BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -565,14 +682,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05D8CF8A1E6D6AA000227723 /* AddNote.storyboard in Resources */,
-				05D8CF0C1E6D0DA200227723 /* VideoNoteView.xib in Resources */,
+				05FFA2421E752E2E00E87806 /* CreateCell.xib in Resources */,
+				05FFA29B1E75342500E87806 /* YFShowAlbumCell.xib in Resources */,
 				05E6FA9A1E6BDA3D0054E8AE /* LaunchScreen.storyboard in Resources */,
 				05D8CF211E6D2E5400227723 /* PhotoNoteCell.xib in Resources */,
 				05E6FA971E6BDA3D0054E8AE /* Assets.xcassets in Resources */,
 				05D8CF1C1E6D1A7700227723 /* TextNoteCell.xib in Resources */,
+				05FFA2A61E75377F00E87806 /* EvaluatePhotoCell.xib in Resources */,
 				05E6FA951E6BDA3D0054E8AE /* Main.storyboard in Resources */,
-				05D8CF071E6D0D7B00227723 /* PhotoNoteView.xib in Resources */,
 				05DDADF01E6D8F7A00443DDB /* Login.storyboard in Resources */,
+				05FFA23D1E751D9A00E87806 /* CreateShareVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +711,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		173B639F647920A9A5410B8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25947039E70F293D0C7223BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodNote/Pods-MoodNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		414E6949EC7B811031F4B0E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodNote/Pods-MoodNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		05E6FA831E6BDA3D0054E8AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -600,24 +767,36 @@
 				05E6FAC61E6BE1AC0054E8AE /* NoteVC.m in Sources */,
 				05E6FA8F1E6BDA3D0054E8AE /* AppDelegate.m in Sources */,
 				05DDADF51E6D8F8800443DDB /* LoginVC.m in Sources */,
+				05AF09111E6F913C00239919 /* PhotoShowManager.m in Sources */,
 				05D8CF171E6D154700227723 /* WarnNoteView.m in Sources */,
 				05D8CF201E6D2E5400227723 /* PhotoNoteCell.m in Sources */,
 				05DDADF61E6D8F8800443DDB /* RegisterVC.m in Sources */,
 				05DDADFC1E6D8FCB00443DDB /* UserDataManager.m in Sources */,
+				05FFA2991E75342500E87806 /* YFShowAlbumVC.m in Sources */,
 				05D8CF141E6D131000227723 /* PlaceholderTextView.m in Sources */,
+				05FFA2981E75342500E87806 /* YFShowGroupAlbumVC.m in Sources */,
+				05FFA2411E752E2E00E87806 /* CreateCell.m in Sources */,
+				05F141EA1E716F04003BB37A /* ShowNoteVC.m in Sources */,
 				05DDADF91E6D8FA600443DDB /* LoginManager.m in Sources */,
 				05DDAE001E6D929E00443DDB /* BaseTabbarVC.m in Sources */,
 				05DDADEB1E6D8ED100443DDB /* MBProgressHUD+YF.m in Sources */,
 				05DDAE141E6D975C00443DDB /* YFBmobManager.m in Sources */,
+				05FFA29C1E75342500E87806 /* YFSelfImage.m in Sources */,
+				05AF09151E6F948000239919 /* NoteModel.m in Sources */,
 				05DDAE191E6DA11B00443DDB /* MineVC.m in Sources */,
+				05FFA2A51E75377F00E87806 /* EvaluatePhotoCell.m in Sources */,
+				05FFA29E1E75342500E87806 /* ALAssetsLibrary+YF.m in Sources */,
+				05FFA2A41E75377F00E87806 /* EvaluatePhotoView.m in Sources */,
 				05E6FA8C1E6BDA3D0054E8AE /* main.m in Sources */,
 				05D8CF1B1E6D1A7700227723 /* TextNoteCell.m in Sources */,
+				05FFA23B1E751D6F00E87806 /* CreateShareVC.m in Sources */,
+				05FFA29D1E75342500E87806 /* NSObject+YFPhoto.m in Sources */,
+				05FFA2371E751B3D00E87806 /* ShareVC.m in Sources */,
 				05D8CF241E6D5BDE00227723 /* ObtainLTWManager.m in Sources */,
 				05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */,
-				05D8CF051E6D0D7100227723 /* PhotoNoteView.m in Sources */,
 				05D8CF881E6D68A000227723 /* ObtainLocationManager.m in Sources */,
-				05D8CF0A1E6D0D9700227723 /* VideoNoteView.m in Sources */,
 				05DDADEC1E6D8ED100443DDB /* MBProgressHUD.m in Sources */,
+				05FFA29A1E75342500E87806 /* YFShowAlbumCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +943,7 @@
 		};
 		05E6FAB51E6BDA3D0054E8AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 905F7E595065BCF699E13208 /* Pods-MoodNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7DBWPU265V;
@@ -788,6 +968,7 @@
 		};
 		05E6FAB61E6BDA3D0054E8AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABABBF1C0C7A0105E6286E35 /* Pods-MoodNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7DBWPU265V;
