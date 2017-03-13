@@ -9,6 +9,7 @@
 #import "YFBmobManager.h"
 #import <BmobSDK/Bmob.h>
 #import "NoteModel.h"
+#import "YFCommentModel.h"
 @implementation YFBmobManager
 //登陆接口
 + (void)loginForAccount:(NSString *)account
@@ -206,6 +207,83 @@
             successBlock();
         }else{
             NSLog(@"error = %@",error);
+            failureBlock();
+        }
+    }];
+}
+
++ (void)obtainShareData:(void(^)(NSMutableArray *dataArray))successBlock failure:(void(^)())failureBlock{
+    
+    //首先请求分享的内容
+    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Note_Comment"];
+    [bquery clearCachedResult];
+    
+    NSMutableArray *dataArray = [NSMutableArray array];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        
+        //如果有数据
+        if (array) {
+            
+            for (BmobObject *bmob in array) {
+                YFMessageModel *model = [[YFMessageModel alloc]initWithDic:bmob];
+                [dataArray addObject:model];
+            }
+            
+            successBlock(dataArray);
+        }else{
+            
+            failureBlock();
+        }
+    }];
+}
+
+//分享图片请求
++ (void)obtainShareImage:(NSString *)messageId success:(void(^)(NSMutableArray *imageArray))successBlock failure:(void(^)())failureBlock{
+    
+    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Note_ShareImage"];
+    [bquery clearCachedResult];
+    [bquery whereKey:@"message_id" equalTo:messageId];
+    NSMutableArray *dataArray = [NSMutableArray array];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        
+        if (!error) {
+            
+            for (BmobObject *bmob in array) {
+                
+                if ([bmob objectForKey:@"share_image"]) {
+                    
+                    [dataArray addObject:[bmob objectForKey:@"share_image"]];
+                }
+            }
+            
+            successBlock(dataArray);
+        }else{
+            
+            failureBlock();
+        }
+    }];
+}
+
+//评论请求
++ (void)obtainComment:(NSString *)messageId sucess:(void(^)(NSMutableArray *commentArray))successBlock failure:(void(^)())failureBlock{
+    
+    BmobQuery *bquery = [BmobQuery queryWithClassName:@"Note_Comment2"];
+    [bquery clearCachedResult];
+    [bquery whereKey:@"message_id" equalTo:messageId];
+    NSMutableArray *dataArray = [NSMutableArray array];
+    [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        
+        if (!error) {
+            
+            for (BmobObject *bmob in array) {
+                
+                YFCommentModel *model = [[YFCommentModel alloc]initWithDic:bmob];
+                [dataArray addObject:model];
+            }
+            successBlock(dataArray);
+        }
+        else{
+            
             failureBlock();
         }
     }];

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050103881E76AA5A00C2B9F5 /* YFMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 050103851E76AA5A00C2B9F5 /* YFMessageModel.m */; };
+		050103891E76AA5A00C2B9F5 /* YFCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 050103871E76AA5A00C2B9F5 /* YFCommentModel.m */; };
+		0501038C1E76AA6000C2B9F5 /* YFShareRectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0501038B1E76AA6000C2B9F5 /* YFShareRectManager.m */; };
+		050103941E76AA6D00C2B9F5 /* ShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0501038E1E76AA6D00C2B9F5 /* ShareCell.m */; };
+		050103951E76AA6D00C2B9F5 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050103901E76AA6D00C2B9F5 /* ImageCell.m */; };
+		050103961E76AA6D00C2B9F5 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050103911E76AA6D00C2B9F5 /* ImageCell.xib */; };
+		050103971E76AA6D00C2B9F5 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050103931E76AA6D00C2B9F5 /* CommentCell.m */; };
 		05AF09111E6F913C00239919 /* PhotoShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AF09101E6F913C00239919 /* PhotoShowManager.m */; };
 		05AF09151E6F948000239919 /* NoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AF09141E6F948000239919 /* NoteModel.m */; };
 		05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CEFA1E6D0BDE00227723 /* AddNote.m */; };
@@ -92,6 +99,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050103841E76AA5A00C2B9F5 /* YFMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFMessageModel.h; sourceTree = "<group>"; };
+		050103851E76AA5A00C2B9F5 /* YFMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMessageModel.m; sourceTree = "<group>"; };
+		050103861E76AA5A00C2B9F5 /* YFCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCommentModel.h; sourceTree = "<group>"; };
+		050103871E76AA5A00C2B9F5 /* YFCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCommentModel.m; sourceTree = "<group>"; };
+		0501038A1E76AA6000C2B9F5 /* YFShareRectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFShareRectManager.h; sourceTree = "<group>"; };
+		0501038B1E76AA6000C2B9F5 /* YFShareRectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFShareRectManager.m; sourceTree = "<group>"; };
+		0501038D1E76AA6D00C2B9F5 /* ShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCell.h; sourceTree = "<group>"; };
+		0501038E1E76AA6D00C2B9F5 /* ShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCell.m; sourceTree = "<group>"; };
+		0501038F1E76AA6D00C2B9F5 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		050103901E76AA6D00C2B9F5 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		050103911E76AA6D00C2B9F5 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		050103921E76AA6D00C2B9F5 /* CommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentCell.h; sourceTree = "<group>"; };
+		050103931E76AA6D00C2B9F5 /* CommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentCell.m; sourceTree = "<group>"; };
 		05AF090F1E6F913C00239919 /* PhotoShowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoShowManager.h; sourceTree = "<group>"; };
 		05AF09101E6F913C00239919 /* PhotoShowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShowManager.m; sourceTree = "<group>"; };
 		05AF09131E6F948000239919 /* NoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteModel.h; sourceTree = "<group>"; };
@@ -244,6 +264,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050103831E76AA4700C2B9F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0501038A1E76AA6000C2B9F5 /* YFShareRectManager.h */,
+				0501038B1E76AA6000C2B9F5 /* YFShareRectManager.m */,
+				050103841E76AA5A00C2B9F5 /* YFMessageModel.h */,
+				050103851E76AA5A00C2B9F5 /* YFMessageModel.m */,
+				050103861E76AA5A00C2B9F5 /* YFCommentModel.h */,
+				050103871E76AA5A00C2B9F5 /* YFCommentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		05AF090E1E6F912600239919 /* Photo */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +463,7 @@
 		05E6FABE1E6BE0BA0054E8AE /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				050103831E76AA4700C2B9F5 /* Model */,
 				05FFA2381E751D2100E87806 /* View */,
 				05FFA2351E751B3D00E87806 /* ShareVC.h */,
 				05FFA2361E751B3D00E87806 /* ShareVC.m */,
@@ -523,6 +557,13 @@
 		05FFA2381E751D2100E87806 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0501038D1E76AA6D00C2B9F5 /* ShareCell.h */,
+				0501038E1E76AA6D00C2B9F5 /* ShareCell.m */,
+				0501038F1E76AA6D00C2B9F5 /* ImageCell.h */,
+				050103901E76AA6D00C2B9F5 /* ImageCell.m */,
+				050103911E76AA6D00C2B9F5 /* ImageCell.xib */,
+				050103921E76AA6D00C2B9F5 /* CommentCell.h */,
+				050103931E76AA6D00C2B9F5 /* CommentCell.m */,
 				05FFA23E1E752E2E00E87806 /* CreateCell.h */,
 				05FFA23F1E752E2E00E87806 /* CreateCell.m */,
 				05FFA2401E752E2E00E87806 /* CreateCell.xib */,
@@ -690,6 +731,7 @@
 				05D8CF1C1E6D1A7700227723 /* TextNoteCell.xib in Resources */,
 				05FFA2A61E75377F00E87806 /* EvaluatePhotoCell.xib in Resources */,
 				05E6FA951E6BDA3D0054E8AE /* Main.storyboard in Resources */,
+				050103961E76AA6D00C2B9F5 /* ImageCell.xib in Resources */,
 				05DDADF01E6D8F7A00443DDB /* Login.storyboard in Resources */,
 				05FFA23D1E751D9A00E87806 /* CreateShareVC.storyboard in Resources */,
 			);
@@ -765,6 +807,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05E6FAC61E6BE1AC0054E8AE /* NoteVC.m in Sources */,
+				050103971E76AA6D00C2B9F5 /* CommentCell.m in Sources */,
 				05E6FA8F1E6BDA3D0054E8AE /* AppDelegate.m in Sources */,
 				05DDADF51E6D8F8800443DDB /* LoginVC.m in Sources */,
 				05AF09111E6F913C00239919 /* PhotoShowManager.m in Sources */,
@@ -773,14 +816,17 @@
 				05DDADF61E6D8F8800443DDB /* RegisterVC.m in Sources */,
 				05DDADFC1E6D8FCB00443DDB /* UserDataManager.m in Sources */,
 				05FFA2991E75342500E87806 /* YFShowAlbumVC.m in Sources */,
+				050103891E76AA5A00C2B9F5 /* YFCommentModel.m in Sources */,
 				05D8CF141E6D131000227723 /* PlaceholderTextView.m in Sources */,
 				05FFA2981E75342500E87806 /* YFShowGroupAlbumVC.m in Sources */,
 				05FFA2411E752E2E00E87806 /* CreateCell.m in Sources */,
 				05F141EA1E716F04003BB37A /* ShowNoteVC.m in Sources */,
+				0501038C1E76AA6000C2B9F5 /* YFShareRectManager.m in Sources */,
 				05DDADF91E6D8FA600443DDB /* LoginManager.m in Sources */,
 				05DDAE001E6D929E00443DDB /* BaseTabbarVC.m in Sources */,
 				05DDADEB1E6D8ED100443DDB /* MBProgressHUD+YF.m in Sources */,
 				05DDAE141E6D975C00443DDB /* YFBmobManager.m in Sources */,
+				050103951E76AA6D00C2B9F5 /* ImageCell.m in Sources */,
 				05FFA29C1E75342500E87806 /* YFSelfImage.m in Sources */,
 				05AF09151E6F948000239919 /* NoteModel.m in Sources */,
 				05DDAE191E6DA11B00443DDB /* MineVC.m in Sources */,
@@ -789,6 +835,7 @@
 				05FFA2A41E75377F00E87806 /* EvaluatePhotoView.m in Sources */,
 				05E6FA8C1E6BDA3D0054E8AE /* main.m in Sources */,
 				05D8CF1B1E6D1A7700227723 /* TextNoteCell.m in Sources */,
+				050103941E76AA6D00C2B9F5 /* ShareCell.m in Sources */,
 				05FFA23B1E751D6F00E87806 /* CreateShareVC.m in Sources */,
 				05FFA29D1E75342500E87806 /* NSObject+YFPhoto.m in Sources */,
 				05FFA2371E751B3D00E87806 /* ShareVC.m in Sources */,
@@ -796,6 +843,7 @@
 				05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */,
 				05D8CF881E6D68A000227723 /* ObtainLocationManager.m in Sources */,
 				05DDADEC1E6D8ED100443DDB /* MBProgressHUD.m in Sources */,
+				050103881E76AA5A00C2B9F5 /* YFMessageModel.m in Sources */,
 				05FFA29A1E75342500E87806 /* YFShowAlbumCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

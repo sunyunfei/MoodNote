@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NoteModel.h"
+#import "YFMessageModel.h"
 @interface YFBmobManager : NSObject
 //登陆接口
 + (void)loginForAccount:(NSString *)account
@@ -50,4 +51,10 @@
 
 //分享创建事件接口
 //+ (void)createShareData:()
+
++ (void)obtainShareData:(void(^)(NSMutableArray *dataArray))successBlock failure:(void(^)())failureBlock;
+//分享图片请求
++ (void)obtainShareImage:(NSString *)messageId success:(void(^)(NSMutableArray *imageArray))successBlock failure:(void(^)())failureBlock;
+//评论请求
++ (void)obtainComment:(NSString *)messageId sucess:(void(^)(NSMutableArray *commentArray))successBlock failure:(void(^)())failureBlock;
 @end
