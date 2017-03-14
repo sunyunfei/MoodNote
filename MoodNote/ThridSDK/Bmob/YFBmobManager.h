@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NoteModel.h"
 #import "YFMessageModel.h"
+#import "YFCommentModel.h"
 @interface YFBmobManager : NSObject
 //登陆接口
 + (void)loginForAccount:(NSString *)account
@@ -57,4 +58,10 @@
 + (void)obtainShareImage:(NSString *)messageId success:(void(^)(NSMutableArray *imageArray))successBlock failure:(void(^)())failureBlock;
 //评论请求
 + (void)obtainComment:(NSString *)messageId sucess:(void(^)(NSMutableArray *commentArray))successBlock failure:(void(^)())failureBlock;
+
+//插入评论
++ (void)insertComment:(NSString *)messageId andCommentModel:(YFCommentModel *)model sucess:(void(^)())successBlock failure:(void(^)())failureBlock;
+
+//插入分享
++ (void)insertShare:(YFMessageModel *)model andImageArray:(NSArray *)imageArray sucess:(void(^)())successBlock failure:(void(^)())failureBlock;
 @end

@@ -13,7 +13,7 @@
 #import "YFMessageModel.h"
 #import "ShareCell.h"
 static NSString *cell_now = @"ShareCell";
-@interface ShareVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface ShareVC ()<UITableViewDelegate,UITableViewDataSource,CreateShareVCDelegate>
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSMutableArray *dataArray;//数据
 - (IBAction)clickShareBtn:(id)sender;
@@ -24,8 +24,7 @@ static NSString *cell_now = @"ShareCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self p_loadData];
+     _dataArray = [NSMutableArray array];
     [self p_loadTableView];
 }
 
@@ -39,6 +38,7 @@ static NSString *cell_now = @"ShareCell";
     self.hidesBottomBarWhenPushed = YES;
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"CreateShareVC" bundle:nil];
     CreateShareVC *vc = [story instantiateViewControllerWithIdentifier:@"create"];
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
@@ -51,13 +51,19 @@ static NSString *cell_now = @"ShareCell";
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.tableView registerClass:[ShareCell class] forCellReuseIdentifier:cell_now];
+    __block typeof(self)weakSelf = self;
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [weakSelf p_loadData];
+    }];
     [self.view addSubview:_tableView];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 //数据
 - (void)p_loadData{
     
-    _dataArray = [NSMutableArray array];
+    [_dataArray removeAllObjects];
     __block typeof(self)weakSelf = self;
     [YFBmobManager obtainShareData:^(NSMutableArray *dataArray) {
         //开始分享图片的请求
@@ -75,7 +81,8 @@ static NSString *cell_now = @"ShareCell";
                     //说明到了最后
                     for (YFMessageModel *model in dataArray) {
                         
-                        YFShareRectManager *manager = [[YFShareRectManager alloc]initWithObject:model];
+                        YFShareRectManager *manager = [[YFShareRectManager alloc]init];
+                        manager.messageModel = model;
                         [weakSelf.dataArray addObject:manager];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -89,18 +96,20 @@ static NSString *cell_now = @"ShareCell";
             
             [YFBmobManager obtainComment:model.message_id sucess:^(NSMutableArray *commentArray) {
                 
-                model.commentModelArray = commentArray;
+                [model.commentModelArray addObjectsFromArray:commentArray];
                 if (weakI == dataArray.count - 1) {
                     [weakSelf.dataArray removeAllObjects];
                     //说明到了最后
                     for (YFMessageModel *model in dataArray) {
                         
-                        YFShareRectManager *manager = [[YFShareRectManager alloc]initWithObject:model];
+                        YFShareRectManager *manager = [[YFShareRectManager alloc]init];
+                        manager.messageModel = model;
                         [weakSelf.dataArray addObject:manager];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         
-                        [weakSelf.tableView reloadData];
+                        [weakSelf.tableView.mj_header endRefreshing];
+                        [weakSelf performSelector:@selector(reloadDataForTableView) withObject:weakSelf afterDelay:1.0];
                     });
                 }
                 
@@ -115,7 +124,19 @@ static NSString *cell_now = @"ShareCell";
     }];
 }
 
+-(void)reloadDataForTableView{
+
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark ---代理
+
+- (void)refreshShareVC{
+
+    [self.tableView.mj_header beginRefreshing];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return self.dataArray.count;
@@ -126,6 +147,12 @@ static NSString *cell_now = @"ShareCell";
     
     ShareCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_now forIndexPath:indexPath];
     cell.rectManager = self.dataArray[indexPath.row];
+    cell.indexPath = indexPath;
+    __block typeof(self)weakSelf = self;
+    cell.refreshCell = ^(NSIndexPath *path){
+    
+        [weakSelf.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationNone];
+    };
     return cell;
 }
 

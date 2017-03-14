@@ -23,10 +23,6 @@
             self.message = [bmob objectForKey:@"message"];
         }
         
-        if ([bmob objectForKey:@"message_type"]) {
-            self.message_type = [bmob objectForKey:@"message_type"];
-        }
-        
         if ([bmob objectForKey:@"userId"]) {
             self.userId = [bmob objectForKey:@"userId"];
         }

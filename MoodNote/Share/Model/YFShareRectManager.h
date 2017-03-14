@@ -20,5 +20,4 @@
 @property(nonatomic,assign)CGRect commentRect;//评论内容
 @property(nonatomic,assign)CGFloat allHeight;//总高度
 @property(nonatomic,strong)YFMessageModel *messageModel;//数据
-- (instancetype)initWithObject:(YFMessageModel *)model;//构造
 @end

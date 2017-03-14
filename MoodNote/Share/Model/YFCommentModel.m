@@ -46,9 +46,9 @@
             self.commentUserName = [bmob objectForKey:@"comment_userName"];
         }
         
-        if ([bmob objectForKey:@"comment_photo"]) {
-            self.commentPhoto = [bmob objectForKey:@"comment_photo"];
-        }
+//        if ([bmob objectForKey:@"comment_photo"]) {
+//            self.commentPhoto = [bmob objectForKey:@"comment_photo"];
+//        }
         
         if ([bmob objectForKey:@"comment_text"]) {
             self.commentText = [bmob objectForKey:@"comment_text"];
@@ -61,14 +61,14 @@
             self.commentByUserName = [bmob objectForKey:@"comment_byUserName"];
         }
         
-        if ([bmob objectForKey:@"comment_byUserPhoto"]) {
-            self.commentByPhoto = [bmob objectForKey:@"comment_byUserPhoto"];
-        }
-        
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-        
-        self.createDateStr = [dateFormatter stringFromDate:bmob.updatedAt];
+//        if ([bmob objectForKey:@"comment_byUserPhoto"]) {
+//            self.commentByPhoto = [bmob objectForKey:@"comment_byUserPhoto"];
+//        }
+//        
+//        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+//        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+//        
+//        self.createDateStr = [dateFormatter stringFromDate:bmob.updatedAt];
     }
     return self;
 }

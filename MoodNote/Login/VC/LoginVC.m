@@ -60,6 +60,7 @@
     
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     RegisterVC *vc = [story instantiateViewControllerWithIdentifier:@"register"];
+    vc.title =@"注册";
     [self.navigationController pushViewController:vc animated:YES];
 }
 

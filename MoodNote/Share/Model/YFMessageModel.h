@@ -19,9 +19,6 @@
 ///发布说说的时间标签
 @property(nonatomic,copy)NSString *timeTag;
 
-///发布说说的类型）
-@property(nonatomic,copy)NSString *message_type;
-
 ///发布说说者id
 @property(nonatomic,copy)NSString *userId;
 

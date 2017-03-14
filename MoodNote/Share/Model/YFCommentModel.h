@@ -15,14 +15,14 @@
 @property(nonatomic,copy)NSString *commentUserId;
 
 @property(nonatomic,copy)NSString *commentUserName;
-
-@property(nonatomic,copy)NSString *commentPhoto;
+//
+//@property(nonatomic,copy)NSString *commentPhoto;
 
 @property(nonatomic,copy)NSString *commentText;
 @property(nonatomic,copy)NSString *commentByUserId;
 @property(nonatomic,copy)NSString *commentByUserName;
-@property(nonatomic,copy)NSString *commentByPhoto;
-@property(nonatomic,copy)NSString *createDateStr;
+//@property(nonatomic,copy)NSString *commentByPhoto;
+//@property(nonatomic,copy)NSString *createDateStr;
 
 -(instancetype)initWithDic:(BmobObject *)bmob;
 @end

@@ -10,4 +10,6 @@
 #import "YFShareRectManager.h"
 @interface ShareCell : UITableViewCell
 @property(nonatomic,strong)YFShareRectManager *rectManager;//数据
+@property(nonatomic,strong)NSIndexPath *indexPath;
+@property(nonatomic,copy)void(^refreshCell)(NSIndexPath *path);
 @end

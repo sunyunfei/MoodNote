@@ -16,6 +16,7 @@
 		050103971E76AA6D00C2B9F5 /* CommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050103931E76AA6D00C2B9F5 /* CommentCell.m */; };
 		05AF09111E6F913C00239919 /* PhotoShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AF09101E6F913C00239919 /* PhotoShowManager.m */; };
 		05AF09151E6F948000239919 /* NoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AF09141E6F948000239919 /* NoteModel.m */; };
+		05D761E31E76C68C001AE5BE /* InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D761E21E76C68C001AE5BE /* InputView.m */; };
 		05D8CEFB1E6D0BDE00227723 /* AddNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CEFA1E6D0BDE00227723 /* AddNote.m */; };
 		05D8CF141E6D131000227723 /* PlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF131E6D131000227723 /* PlaceholderTextView.m */; };
 		05D8CF171E6D154700227723 /* WarnNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D8CF161E6D154700227723 /* WarnNoteView.m */; };
@@ -116,6 +117,8 @@
 		05AF09101E6F913C00239919 /* PhotoShowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoShowManager.m; sourceTree = "<group>"; };
 		05AF09131E6F948000239919 /* NoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteModel.h; sourceTree = "<group>"; };
 		05AF09141E6F948000239919 /* NoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteModel.m; sourceTree = "<group>"; };
+		05D761E11E76C68C001AE5BE /* InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputView.h; sourceTree = "<group>"; };
+		05D761E21E76C68C001AE5BE /* InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputView.m; sourceTree = "<group>"; };
 		05D8CEF91E6D0BDE00227723 /* AddNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNote.h; sourceTree = "<group>"; };
 		05D8CEFA1E6D0BDE00227723 /* AddNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNote.m; sourceTree = "<group>"; };
 		05D8CF121E6D131000227723 /* PlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceholderTextView.h; sourceTree = "<group>"; };
@@ -567,6 +570,8 @@
 				05FFA23E1E752E2E00E87806 /* CreateCell.h */,
 				05FFA23F1E752E2E00E87806 /* CreateCell.m */,
 				05FFA2401E752E2E00E87806 /* CreateCell.xib */,
+				05D761E11E76C68C001AE5BE /* InputView.h */,
+				05D761E21E76C68C001AE5BE /* InputView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -823,6 +828,7 @@
 				05F141EA1E716F04003BB37A /* ShowNoteVC.m in Sources */,
 				0501038C1E76AA6000C2B9F5 /* YFShareRectManager.m in Sources */,
 				05DDADF91E6D8FA600443DDB /* LoginManager.m in Sources */,
+				05D761E31E76C68C001AE5BE /* InputView.m in Sources */,
 				05DDAE001E6D929E00443DDB /* BaseTabbarVC.m in Sources */,
 				05DDADEB1E6D8ED100443DDB /* MBProgressHUD+YF.m in Sources */,
 				05DDAE141E6D975C00443DDB /* YFBmobManager.m in Sources */,

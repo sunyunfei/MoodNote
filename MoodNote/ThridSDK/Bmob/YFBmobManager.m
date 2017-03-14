@@ -29,8 +29,17 @@
             if ([pwd isEqualToString:[obj objectForKey:@"userPassword"]]) {
                 //到这里数据登录成功
                 
+                //首先判断name，和icon有没有值
+                NSString *name = [obj objectForKey:@"userName"];
+                if (name == nil || name.length <= 0) {
+                    name = account;
+                }
+                NSString *icon = [obj objectForKey:@"userIcon"];
+                if (icon == nil || icon.length <= 0) {
+                    icon = @"http://b.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=f0c5c08030d3d539c16807c70fb7c566/8ad4b31c8701a18bbef9f231982f07082838feba.jpg";
+                }
                 //记录登陆的状态
-                [UserDataManager saveUserStatus:YES andUserMobile:account andUserPwd:pwd andUserId:obj.objectId];
+                [UserDataManager saveUserStatus:YES andUserMobile:account andUserPwd:pwd andUserId:obj.objectId andUserName:name andUserIcon:icon];
                 //成功回調
                 successBlock();
             }else{
@@ -287,5 +296,122 @@
             failureBlock();
         }
     }];
+}
+
+//插入评论
++ (void)insertComment:(NSString *)messageId andCommentModel:(YFCommentModel *)model sucess:(void(^)())successBlock failure:(void(^)())failureBlock{
+    
+    BmobObject *obj = [BmobObject objectWithClassName:@"Note_Comment2"];
+    [obj setObject:messageId forKey:@"message_id"];
+    [obj setObject:model.commentUserName forKey:@"comment_userName"];
+    [obj setObject:model.commentUserId forKey:@"comment_userId"];
+    [obj setObject:model.commentText forKey:@"comment_text"];
+    [obj setObject:model.commentByUserId forKey:@"comment_byUserId"];
+    [obj setObject:model.commentByUserName forKey:@"comment_byUserName"];
+    [obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+        
+        if (isSuccessful) {
+            successBlock();
+        }else{
+        
+            failureBlock();
+        }
+    }];
+}
+
+//插入分享
++ (void)insertShare:(YFMessageModel *)model andImageArray:(NSArray *)imageArray sucess:(void(^)())successBlock failure:(void(^)())failureBlock{
+
+    BmobObject *obj = [BmobObject objectWithClassName:@"Note_Comment"];
+    [obj setObject:model.userName forKey:@"userName"];
+    [obj setObject:model.photo forKey:@"photo"];
+    [obj setObject:model.userId forKey:@"userId"];
+    [obj setObject:model.message forKey:@"message"];
+    NSString *cid = [YFBmobManager getTimeNow];
+    [obj setObject:cid forKey:@"cid"];
+    [obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+        
+        if (isSuccessful) {
+            
+            //获得对应的messageid
+            BmobQuery *bquery = [BmobQuery queryWithClassName:@"Note_Comment"];
+            [bquery whereKey:@"cid" equalTo:cid];
+            [bquery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+                
+                //如果有
+                if (array.count > 0) {
+                    
+                    BmobObject *bmob = array[0];
+                    NSString *messageId = bmob.objectId;
+                    //上传图片
+                    if (imageArray.count > 0) {
+                        
+                        for(int i = 0;i < imageArray.count;i ++){
+                            
+                            [YFBmobManager updateShareImage:imageArray[i] andId:messageId sucess:^{
+                                
+                                if (i == imageArray.count - 1) {
+                                    
+                                    //说明都上传完了
+                                    successBlock();
+                                }
+                            } failure:^{
+                                failureBlock();
+                            }];
+                        }
+                    }else{
+                    
+                        //说明都上传完了
+                        successBlock();
+                    }
+                }
+            }];
+        }else{
+        
+            failureBlock();
+        }
+    }];
+}
+
+//分享图片上传
++ (void)updateShareImage:(UIImage *)image andId:(NSString *)messageId sucess:(void(^)())successBlock failure:(void(^)())failureBlock{
+
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+    [YFBmobManager updateDataToBMOB:imageData andName:[NSString stringWithFormat:@"share%@.jpg",[YFBmobManager getTimeNow]] success:^(NSString *url) {
+        
+        //上传url
+        BmobObject *obj = [BmobObject objectWithClassName:@"Note_ShareImage"];
+        [obj setObject:messageId forKey:@"message_id"];
+        [obj setObject:url forKey:@"share_image"];
+        [obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+            
+            if (isSuccessful) {
+                successBlock();
+            }else{
+            
+                failureBlock();
+            }
+        }];
+    } failure:^{
+        
+        failureBlock();
+    }];
+}
+
+/**
+ *  返回当前时间
+ *
+ */
++ (NSString *)getTimeNow
+{
+    NSString* date;
+    NSDateFormatter * formatter = [[NSDateFormatter alloc ] init];
+    [formatter setDateFormat:@"YYYYMMddhhmmssSSS"];
+    date = [formatter stringFromDate:[NSDate date]];
+    //取出个随机数
+    int last = arc4random() % 10000;
+    NSString *timeNow = [[NSString alloc] initWithFormat:@"%@-%i", date,last];
+    //NSLog(@"%@", timeNow);
+    return timeNow;
 }
 @end

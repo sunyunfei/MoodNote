@@ -10,6 +10,7 @@
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "ImageCell.h"
 #import "CommentCell.h"
+#import "InputView.h"
 static NSString *cell_comment = @"CommentCell";
 static NSString *cell_image = @"ImageCell";
 @interface ShareCell()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
@@ -20,6 +21,7 @@ static NSString *cell_image = @"ImageCell";
 @property(nonatomic,strong)UICollectionView *collectionView;//图片显示
 @property(nonatomic,strong)UIButton *commentBtn;//评论图片
 @property(nonatomic,strong)UITableView *commentTableView;//评论内容
+@property(nonatomic,strong)InputView *inputView;//输入框
 @end
 @implementation ShareCell
 
@@ -47,10 +49,11 @@ static NSString *cell_image = @"ImageCell";
         _contentLabel.numberOfLines = 0;
         [self.contentView addSubview:_contentLabel];
         
-        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, 1) collectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor blueColor];
+        
         [_collectionView registerNib:[UINib nibWithNibName:cell_image bundle:nil] forCellWithReuseIdentifier:cell_image];
         [self.contentView addSubview:_collectionView];
         
@@ -73,7 +76,9 @@ static NSString *cell_image = @"ImageCell";
 //按钮事件
 - (void)clickCommentBtn{
 
-    
+    //评论
+    [self loadInputView:New_Comment];
+    _inputView.messageModel = self.rectManager.messageModel;
 }
 
 - (void)setRectManager:(YFShareRectManager *)rectManager{
@@ -85,11 +90,11 @@ static NSString *cell_image = @"ImageCell";
     self.nameLabel.text = model.userName;
     self.timeLabel.text = model.timeTag;
     self.contentLabel.text = model.message;
+    [self setUIFrame];
     
 }
 
-//ui布局
-- (void)layoutSubviews{
+- (void)setUIFrame{
 
     _icon.frame = self.rectManager.iconRect;
     self.nameLabel.frame = self.rectManager.nameRect;
@@ -101,21 +106,53 @@ static NSString *cell_image = @"ImageCell";
     
     if (self.rectManager.messageModel.messageSmallPics.count > 0) {
         
-       [self setLayout];
+        [self setLayout];
+        [self.collectionView reloadData];
+    }else{
+        
+        //[self.collectionView removeFromSuperview];
     }
-   
-    [self.collectionView reloadData];
+    
+    
     [self.commentTableView reloadData];
+}
+
+//家在输入框
+- (void)loadInputView:(NSInteger)mode{
+
+    if (_inputView) {
+        [_inputView removeFromSuperview];
+        _inputView = nil;
+    }
+    _inputView = [[InputView alloc]init];
+    _inputView.mode = mode;
+    __block typeof(self)weakSelf = self;
+    _inputView.refreshBlock = ^(YFMessageModel *model){
+    
+        weakSelf.rectManager.messageModel = model;
+        
+        if (weakSelf.refreshCell) {
+            weakSelf.refreshCell(weakSelf.indexPath);
+        }
+    };
+    [_inputView showInWindows];
 }
 
 #pragma mark ----九宫格
 - (void)setLayout{
 
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    layout.itemSize = CGSizeMake((CGRectGetWidth(self.collectionView.frame) + 1) / 4,70);
+    CGFloat w = CGRectGetWidth(self.collectionView.frame);
+    if(w <= 0){
+    
+        w = 10;
+    }
+    layout.itemSize = CGSizeMake(w/4.0,70);
+    NSLog(@"item = %.2f---%.2f",layout.itemSize.width,layout.itemSize.width);
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
-    [_collectionView setCollectionViewLayout:layout];
+    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    [self.collectionView setCollectionViewLayout:layout];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -148,5 +185,13 @@ static NSString *cell_image = @"ImageCell";
 
     YFCommentModel *model = self.rectManager.messageModel.commentModelArray[indexPath.row];
     return [CommentCell cellHeightForCell:model];
+}
+
+//评论点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    [self loadInputView:Replay_Mode];
+    _inputView.messageModel = self.rectManager.messageModel;
+    _inputView.commentModel = self.rectManager.messageModel.commentModelArray[indexPath.row];
 }
 @end

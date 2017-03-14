@@ -13,15 +13,10 @@
 #define K_IMageGeight 140//图片最大总高
 @implementation YFShareRectManager
 
-- (instancetype)initWithObject:(YFMessageModel *)model{
+- (void)setMessageModel:(YFMessageModel *)messageModel{
 
-    self = [super init];
-    if (self) {
-        
-        [self rectSet:model];
-        self.messageModel = model;
-    }
-    return self;
+    _messageModel = messageModel;
+    [self rectSet:messageModel];
 }
 
 //rect设置

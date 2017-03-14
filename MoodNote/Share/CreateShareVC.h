@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol CreateShareVCDelegate <NSObject>
 
+- (void)refreshShareVC;
+
+@end
 @interface CreateShareVC : UIViewController
-
+@property(nonatomic,assign)id<CreateShareVCDelegate>delegate;
 @end

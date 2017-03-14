@@ -144,7 +144,24 @@ static NSString *createCell = @"CreateCell";
     }
     
     //开始上传
-    
+    //首先上传message数据
+    YFMessageModel *model = [[YFMessageModel alloc]init];
+    model.userName = [UserDataManager obtainUserName];
+    model.userId = [UserDataManager obtainUserId];
+    model.photo = [UserDataManager obtainUserIcon];
+    model.message = self.textView.text;
+    [MBProgressHUD YFshowHUD:self.view labelText:@"上传中..."];
+    [YFBmobManager insertShare:model andImageArray:imageArray sucess:^{
+        
+        [MBProgressHUD YFhiddenHUD:self.view];
+        if ([self.delegate respondsToSelector:@selector(refreshShareVC)]) {
+            [self.delegate refreshShareVC];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^{
+        
+        [MBProgressHUD YFhiddenOldHUDandShowNewHUD:self.view newText:@"上传失败"];
+    }];
 }
 
 //取消
