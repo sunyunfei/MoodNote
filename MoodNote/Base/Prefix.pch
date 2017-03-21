@@ -3,3 +3,22 @@
 #import "YFBmobManager.h"
 #import "MJRefresh.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BaseNavView.h"
+
+
+#ifndef MyFamily_HeaderContent_h
+#define MyFamily_HeaderContent_h
+#define padding 10
+#define screenWidth [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+
+//myfamily
+#define myFamilyHeaderHeight 80
+#define makeBookButtonHeight 60
+
+#define imageTag 2000
+#endif
+
+//主题颜色
+#define openColor [UIColor redColor]
+#define closeColor [UIColor blueColor]

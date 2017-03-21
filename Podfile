@@ -7,4 +7,5 @@ target 'MoodNote' do
    pod 'SDWebImage'
    pod 'IQKeyboardManager'
    pod 'MJRefresh'
+   pod 'AFNetworking', '~> 3.0'
 end

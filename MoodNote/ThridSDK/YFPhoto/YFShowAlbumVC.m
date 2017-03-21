@@ -130,11 +130,6 @@ static NSString * const SHOWCELL = @"YFShowAlbumCell";
     __weak typeof(self)weakSelf = self;
     cell.selectedBlock = ^(NSInteger index){
     
-        if (weakSelf.maxCount + weakSelf.dataArray.count >= 9) {
-            
-            [MBProgressHUD YFshowMessage:weakSelf.view showText:@"图片选择不能超过9张"];
-            return ;
-        }
         //把选中的图片放倒一个数组里面
         [weakSelf.selectedArray addObject:[weakSelf.dataArray objectAtIndex:index]];
         selectBtn.userInteractionEnabled = YES;

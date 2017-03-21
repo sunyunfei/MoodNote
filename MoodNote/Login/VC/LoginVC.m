@@ -2,8 +2,8 @@
 //  LoginVC.m
 //  fdNews-iOS
 //
-//  Created by 孙云飞 on 2017/3/4.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/4.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "LoginVC.h"
@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *pwdField;//密码
 - (IBAction)clickLoginBtn:(UIButton *)sender;//点击登陆
 - (IBAction)clickRegisterBtn:(UIButton *)sender;//点击注册
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 
@@ -23,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.loginBtn.backgroundColor = [UserDataManager obtainColor] ? openColor : closeColor;
 }
 
 - (void)didReceiveMemoryWarning {

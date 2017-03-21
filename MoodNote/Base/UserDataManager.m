@@ -2,8 +2,8 @@
 //  UserDataManager.m
 //  fdNews-iOS
 //
-//  Created by 孙云飞 on 2017/3/4.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/4.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "UserDataManager.h"
@@ -25,6 +25,34 @@ static NSString *user_icon = @"userIcon";
     [defaults setObject:name forKey:user_name];
     [defaults setObject:icon forKey:user_icon];
     [defaults synchronize];
+}
+
++ (void)saveIcon:(NSString *)icon{
+
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+     [defaults setObject:icon forKey:user_icon];
+     [defaults synchronize];
+}
+
++ (void)saveName:(NSString *)name{
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:name forKey:user_name];
+    [defaults synchronize];
+}
+
++ (void)saveColor:(BOOL)flag{
+
+    NSLog(@"flag = %i",flag);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:flag forKey:@"color"];
+    [defaults synchronize];
+}
+
++ (BOOL)obtainColor{
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [defaults boolForKey:@"color"];
 }
 
 //判断是否登陆

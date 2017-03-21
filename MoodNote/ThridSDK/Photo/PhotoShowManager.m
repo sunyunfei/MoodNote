@@ -107,6 +107,7 @@
 //保存图片
 - (void)saveImage:(UIImage *)tempImage
 {
+    [MBProgressHUD YFshowHUD:[UIApplication sharedApplication].keyWindow.rootViewController.view labelText:@"转换中"];
     //测试用
     NSData *imageData = UIImageJPEGRepresentation(tempImage, 0.5);
     
@@ -120,9 +121,10 @@
         if (weakSelf.updateBlock) {
             weakSelf.updateBlock(url);
             NSLog(@"图片上传成功");
+            [MBProgressHUD YFhiddenOldHUDandShowNewHUD:[UIApplication sharedApplication].keyWindow.rootViewController.view newText:@"格式转换成功"];
         }
     } failure:^{
-        NSLog(@"图片上传失败");
+        [MBProgressHUD YFhiddenOldHUDandShowNewHUD:[UIApplication sharedApplication].keyWindow.rootViewController.view newText:@"格式转换失败"];
     }];
 }
 

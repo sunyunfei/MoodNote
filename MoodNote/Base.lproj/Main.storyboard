@@ -18,6 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="yhz-G3-Gzu" kind="relationship" relationship="viewControllers" id="7SM-kt-I4G"/>
@@ -32,7 +34,7 @@
         <!--心情分享-->
         <scene sceneID="NUZ-Or-q2f">
             <objects>
-                <viewController id="J95-hU-Qz6" customClass="ShareVC" sceneMemberID="viewController">
+                <viewController id="J95-hU-Qz6" customClass="FamilyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fog-1S-PvY"/>
                         <viewControllerLayoutGuide type="bottom" id="get-BB-13B"/>
@@ -40,19 +42,32 @@
                     <view key="view" contentMode="scaleToFill" id="PYi-gW-5MN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QgV-sR-sBo">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J95-hU-Qz6" id="yZQ-nv-dwm"/>
+                                    <outlet property="delegate" destination="J95-hU-Qz6" id="2ca-ov-c9J"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QgV-sR-sBo" firstAttribute="leading" secondItem="PYi-gW-5MN" secondAttribute="leading" id="0pT-lv-lOE"/>
+                            <constraint firstItem="QgV-sR-sBo" firstAttribute="top" secondItem="PYi-gW-5MN" secondAttribute="top" constant="44" id="ZA7-d4-5U2"/>
+                            <constraint firstAttribute="trailing" secondItem="QgV-sR-sBo" secondAttribute="trailing" id="dn8-hY-f8a"/>
+                            <constraint firstAttribute="bottom" secondItem="QgV-sR-sBo" secondAttribute="bottom" id="l81-be-2JF"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="心情分享" id="dLs-4R-dfN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wQw-uz-X7Q">
-                            <connections>
-                                <action selector="clickShareBtn:" destination="J95-hU-Qz6" id="uNj-nC-jbT"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="心情分享" id="dLs-4R-dfN"/>
+                    <connections>
+                        <outlet property="familyTableView" destination="QgV-sR-sBo" id="PcI-8X-0Ni"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAz-B1-uVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416.8" y="555.47226386806597"/>
+            <point key="canvasLocation" x="1417" y="537"/>
         </scene>
         <!--心情日记-->
         <scene sceneID="TYo-Oq-m2X">
@@ -67,14 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="心情日记" id="vAB-NC-dh4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cRT-Mg-Tr0">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="clickAddBtn:" destination="Xr5-U1-TZH" id="3TK-36-Ww4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="心情日记" id="vAB-NC-dh4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIe-4P-0lB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,8 +91,8 @@
         <!--笔记-->
         <scene sceneID="QsX-yr-SG5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yhz-G3-Gzu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="笔记" id="Irs-D1-0y1"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="yhz-G3-Gzu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="笔记" image="TabBar_home_23x23_" id="Irs-D1-0y1"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5wQ-yb-1mb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -102,8 +110,8 @@
         <!--分享-->
         <scene sceneID="Rjg-M9-1w8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b0e-cJ-PAJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="分享" id="T8g-gj-irl"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="b0e-cJ-PAJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="分享" image="TabBar_gift_23x23_" id="T8g-gj-irl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TLC-sq-UOu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -137,7 +145,9 @@
                                         <constraint firstAttribute="height" constant="100" id="SxA-HK-Jdr"/>
                                         <constraint firstAttribute="width" constant="100" id="r02-wU-Y9S"/>
                                     </constraints>
-                                    <state key="normal" title="头像"/>
+                                    <connections>
+                                        <action selector="clickIconBtn:" destination="ZKh-Bh-aW1" eventType="touchUpInside" id="pa2-MJ-AqJ"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvQ-bA-QGu">
                                     <rect key="frame" x="8" y="130" width="359" height="30"/>
@@ -145,6 +155,9 @@
                                     <state key="normal" title="名字">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
+                                    <connections>
+                                        <action selector="clickNameBtn:" destination="ZKh-Bh-aW1" eventType="touchUpInside" id="8XY-3W-HiL"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" red="0.99607843139999996" green="0.8862745098" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -169,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="188" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kRF-RC-BeO" id="Pt5-rZ-obM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主题设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyk-T3-wIH">
@@ -178,9 +191,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WAO-Ah-UrP">
+                                                    <rect key="frame" x="318" y="10" width="51" height="23.5"/>
+                                                    <connections>
+                                                        <action selector="clickSwitchBtn:" destination="ZKh-Bh-aW1" eventType="valueChanged" id="SzL-Im-lgI"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="WAO-Ah-UrP" firstAttribute="top" secondItem="Pt5-rZ-obM" secondAttribute="topMargin" constant="2" id="5VG-Ia-AGT"/>
                                                 <constraint firstItem="Oyk-T3-wIH" firstAttribute="leading" secondItem="Pt5-rZ-obM" secondAttribute="leadingMargin" id="79e-uA-Xzo"/>
+                                                <constraint firstItem="WAO-Ah-UrP" firstAttribute="trailing" secondItem="Pt5-rZ-obM" secondAttribute="trailingMargin" id="7K1-V2-SZQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="WAO-Ah-UrP" secondAttribute="bottom" constant="2" id="Asj-rD-JzQ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Oyk-T3-wIH" secondAttribute="bottom" id="Z4q-rw-3Jz"/>
                                                 <constraint firstItem="Oyk-T3-wIH" firstAttribute="top" secondItem="Pt5-rZ-obM" secondAttribute="topMargin" id="apq-fy-QHC"/>
                                             </constraints>
@@ -190,7 +212,7 @@
                                         <rect key="frame" x="0.0" y="232" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OYU-S0-xey" id="OY7-iT-Gcm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="反馈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GM7-M1-Q4n">
@@ -211,7 +233,7 @@
                                         <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="50I-Jl-d9u" id="MUP-Q5-JO8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本更新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-KM-e3N">
@@ -236,7 +258,7 @@
                                         <rect key="frame" x="0.0" y="348" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yxq-8E-7ZE" id="aZX-NX-XHI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退出登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPQ-hf-8eC">
@@ -265,20 +287,23 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="心情主人" id="Gf7-Lg-Qhm"/>
                     <connections>
+                        <outlet property="bgView" destination="rSG-Ti-lYY" id="uwi-Z0-qoL"/>
                         <outlet property="iconImageView" destination="px3-G5-qHy" id="b3s-Qs-xsx"/>
                         <outlet property="nameLabel" destination="IvQ-bA-QGu" id="CT2-iQ-HBX"/>
+                        <outlet property="outBtn" destination="pPQ-hf-8eC" id="LiZ-sL-8RT"/>
                         <outlet property="outLabel" destination="pPQ-hf-8eC" id="6Xx-6L-hwM"/>
+                        <outlet property="switchBtn" destination="WAO-Ah-UrP" id="Ygi-Tl-r29"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6j7-4l-DZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1416.8" y="1361.4692653673164"/>
         </scene>
-        <!--我的-->
+        <!--个人-->
         <scene sceneID="FcU-8P-B7K">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vkT-IV-k3R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" id="RF7-MF-7DD"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vkT-IV-k3R" customClass="BaseNavVC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="个人" image="TabBar_me_boy_23x23_" id="RF7-MF-7DD"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kg-7h-agI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -293,5 +318,28 @@
             </objects>
             <point key="canvasLocation" x="477.60000000000002" y="1361.4692653673164"/>
         </scene>
+        <!--Show Image View Controller-->
+        <scene sceneID="aiw-yC-kXi">
+            <objects>
+                <viewController storyboardIdentifier="ShowImage" id="ln5-Yt-Dpo" customClass="ShowImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qk6-L1-BKe"/>
+                        <viewControllerLayoutGuide type="bottom" id="rXz-mq-6Lf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Mg-yG-COr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcs-6g-8o3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582" y="537"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="TabBar_gift_23x23_" width="23" height="23"/>
+        <image name="TabBar_home_23x23_" width="23" height="23"/>
+        <image name="TabBar_me_boy_23x23_" width="23" height="23"/>
+    </resources>
 </document>

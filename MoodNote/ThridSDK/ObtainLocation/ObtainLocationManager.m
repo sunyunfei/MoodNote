@@ -2,13 +2,14 @@
 //  ObtainLocationManager.m
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/6.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/6.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "ObtainLocationManager.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+#import "AFNetworking.h"
 #define DefaultLocationTimeout  6
 #define DefaultReGeocodeTimeout 3
 @interface ObtainLocationManager()<AMapLocationManagerDelegate>
@@ -74,7 +75,7 @@
     __block typeof(self)weakSelf = self;
     self.completionBlock = ^(CLLocation *location, AMapLocationReGeocode *regeocode, NSError *error)
     {
-        NSString *locationStr = @"未获取到位置，点击刷新";
+        NSString *locationStr = @"郑州市";
         if (error)
         {
             NSLog(@"locError:{%ld - %@};", (long)error.code, error.localizedDescription);
@@ -91,8 +92,13 @@
         //得到定位信息，添加annotation
         if (location)
         {
-            locationStr = [NSString stringWithFormat:@"%@ %@ %@",regeocode.city,regeocode.district,regeocode.street];
-            [weakSelf loadWeather:regeocode.city];
+            if (regeocode.city == nil) {
+                locationStr = [NSString stringWithFormat:@"%@ %@",regeocode.district,regeocode.street];
+            }else{
+            
+                locationStr = [NSString stringWithFormat:@"%@ %@ %@",regeocode.city,regeocode.district,regeocode.street];
+                [weakSelf loadWeather:regeocode.city];
+            }
         }
         
         //返回数据
@@ -100,27 +106,32 @@
     };
 }
 
-//天气请求http://apistore.baidu.com/microservice/weather?cityname=上海
+//天气请求
 - (void)loadWeather:(NSString *)city{
 
     //首先把市去掉
     NSString *newCity = [city substringToIndex:city.length - 1];
-    //网络请求
-    NSString *urlStr = [NSString stringWithFormat:@"http://apistore.baidu.com/microservice/weather?cityname=%@",newCity];
-    NSLog(@"str = %@",urlStr);
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (data) {
-            NSLog(@"%@",data);
-            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-            NSLog(@"%@",dic);
-        }
-        
-    }];
     
-    //发送请求
-    [task resume];
+    NSDictionary *dic = @{@"appkey":@"7ad051ebf511b1cb",@"city":newCity};
+    AFHTTPSessionManager *manager =[AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript",@"text/plain", nil];
+    
+    __block typeof(self)weakSelf =self;
+    [manager POST:@"http://api.jisuapi.com/weather/query?" parameters:dic progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        NSDictionary *dic2 = responseObject[@"result"];
+        NSLog(@"%@ ",dic2[@"weather"]);
+        
+        if (weakSelf.weatherBlock) {
+            weakSelf.weatherBlock(dic2[@"weather"]);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+    }];
 }
 - (void)dealloc{
 

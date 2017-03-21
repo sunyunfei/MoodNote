@@ -2,8 +2,8 @@
 //  TextNoteCell.m
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/6.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/6.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "TextNoteCell.h"
@@ -21,7 +21,7 @@
     [super awakeFromNib];
     
     self.bgView.layer.cornerRadius = 5;
-    self.bgView.layer.borderWidth = 3;
+    self.bgView.layer.borderWidth = 1;
     self.bgView.layer.borderColor = [UIColor greenColor].CGColor;
 }
 - (void)setModel:(NoteModel *)model{

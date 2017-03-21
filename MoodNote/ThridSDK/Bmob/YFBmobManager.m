@@ -2,8 +2,8 @@
 //  BmobManager.m
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/6.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/6.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "YFBmobManager.h"
@@ -106,6 +106,25 @@
     }];
 }
 
+//个人信息的更改
++ (void)updatePersonMessage:(void(^)())successBlock failure:(void(^)())failureBlock{
+
+    BmobObject *obj = [BmobObject objectWithoutDataWithClassName:@"Note_User" objectId:[UserDataManager obtainUserId]];
+    [obj setObject:[UserDataManager obtainUserName] forKey:@"userName"];
+    [obj setObject:[UserDataManager obtainUserIcon] forKey:@"userIcon"];
+    
+    [obj updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+        
+        if (isSuccessful) {
+            
+            successBlock();
+        }else{
+        
+            failureBlock();
+        }
+    }];
+                       
+}
 
 //图片上传
 + (void)updateDataToBMOB:(NSData *)data
@@ -208,6 +227,7 @@
     [obj setObject:noteModel.note_content forKey:@"note_content"];
     [obj setObject:noteModel.note_image forKey:@"note_image"];
     [obj setObject:noteModel.note_video forKey:@"note_video"];
+    [obj setObject:noteModel.note_type forKey:@"note_type"];
     
     [obj updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         
@@ -234,7 +254,7 @@
         if (array) {
             
             for (BmobObject *bmob in array) {
-                YFMessageModel *model = [[YFMessageModel alloc]initWithDic:bmob];
+                FamilyGroup *model = [[FamilyGroup alloc]initWithDic:bmob];
                 [dataArray addObject:model];
             }
             
@@ -304,10 +324,7 @@
     BmobObject *obj = [BmobObject objectWithClassName:@"Note_Comment2"];
     [obj setObject:messageId forKey:@"message_id"];
     [obj setObject:model.commentUserName forKey:@"comment_userName"];
-    [obj setObject:model.commentUserId forKey:@"comment_userId"];
     [obj setObject:model.commentText forKey:@"comment_text"];
-    [obj setObject:model.commentByUserId forKey:@"comment_byUserId"];
-    [obj setObject:model.commentByUserName forKey:@"comment_byUserName"];
     [obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         
         if (isSuccessful) {
@@ -320,13 +337,13 @@
 }
 
 //插入分享
-+ (void)insertShare:(YFMessageModel *)model andImageArray:(NSArray *)imageArray sucess:(void(^)())successBlock failure:(void(^)())failureBlock{
++ (void)insertShare:(FamilyGroup *)model andImageArray:(NSArray *)imageArray sucess:(void(^)())successBlock failure:(void(^)())failureBlock{
 
     BmobObject *obj = [BmobObject objectWithClassName:@"Note_Comment"];
-    [obj setObject:model.userName forKey:@"userName"];
-    [obj setObject:model.photo forKey:@"photo"];
+    [obj setObject:model.name forKey:@"userName"];
+    [obj setObject:model.icon forKey:@"photo"];
     [obj setObject:model.userId forKey:@"userId"];
-    [obj setObject:model.message forKey:@"message"];
+    [obj setObject:model.shuoshuoText forKey:@"message"];
     NSString *cid = [YFBmobManager getTimeNow];
     [obj setObject:cid forKey:@"cid"];
     [obj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {

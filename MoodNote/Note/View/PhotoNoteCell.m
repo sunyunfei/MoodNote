@@ -2,8 +2,8 @@
 //  PhotoNoteCell.m
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/6.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/6.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "PhotoNoteCell.h"
@@ -25,7 +25,7 @@
     [super awakeFromNib];
     
     self.bgView.layer.cornerRadius = 5;
-    self.bgView.layer.borderWidth = 3;
+    self.bgView.layer.borderWidth = 1;
 }
 
 - (void)setModel:(NoteModel *)model{
@@ -39,10 +39,12 @@
     if ([model.note_type intValue] == 0) {
         
         self.bgView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        self.videoImageView.hidden = YES;
     }else{
     
         //是视频
         self.bgView.layer.borderColor = [UIColor blueColor].CGColor;
+        self.videoImageView.hidden = NO;
     }
     //图片
     [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:model.note_image]];

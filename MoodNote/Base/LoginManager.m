@@ -2,13 +2,14 @@
 //  LoginManager.m
 //  fdNews-iOS
 //
-//  Created by 孙云飞 on 2017/3/4.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/4.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "LoginManager.h"
 #import "LoginVC.h"
 #import "BaseTabbarVC.h"
+#import "BaseNavVC.h"
 @implementation LoginManager
 
 //单例
@@ -29,7 +30,7 @@
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     LoginVC *login = [story instantiateViewControllerWithIdentifier:@"login"];
     login.title = @"登陆";
-    UINavigationController *vc = [[UINavigationController alloc]initWithRootViewController:login];
+    BaseNavVC *vc = [[BaseNavVC alloc]initWithRootViewController:login];
     [UIApplication sharedApplication].keyWindow.rootViewController = vc;
 }
 

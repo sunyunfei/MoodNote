@@ -2,36 +2,33 @@
 //  BaseTabbarVC.m
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/6.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/6.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "BaseTabbarVC.h"
 
 @interface BaseTabbarVC ()
-
+@property(nonatomic,strong)UIView *bgView;
 @end
 
 @implementation BaseTabbarVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+    // 设置一个自定义 View,大小等于 tabBar 的大小
+    _bgView = [[UIView alloc] initWithFrame:self.tabBar.bounds];
+    // 将自定义 View 添加到 tabBar 上
+    [self.tabBar insertSubview:_bgView atIndex:0];
+    [self loadColor];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadColor) name:@"change" object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loadColor{
+
+    // 给自定义 View 设置颜色
+    _bgView.backgroundColor = [UserDataManager obtainColor] ? openColor : closeColor;
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

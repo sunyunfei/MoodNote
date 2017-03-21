@@ -2,13 +2,13 @@
 //  BmobManager.h
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/6.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/6.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "NoteModel.h"
-#import "YFMessageModel.h"
+#import "FamilyGroup.h"
 #import "YFCommentModel.h"
 @interface YFBmobManager : NSObject
 //登陆接口
@@ -26,7 +26,8 @@
 //个人信息获取接口
 + (void)obtainPersonMessageSuccess:(void(^)(NSString *icon,NSString *name))successBlock
                            failure:(void(^)())failureBlock;
-
+//个人信息的更改
++ (void)updatePersonMessage:(void(^)())successBlock failure:(void(^)())failureBlock;
 //图片上传
 + (void)updateDataToBMOB:(NSData *)data
                  andName:(NSString *)name
@@ -63,5 +64,5 @@
 + (void)insertComment:(NSString *)messageId andCommentModel:(YFCommentModel *)model sucess:(void(^)())successBlock failure:(void(^)())failureBlock;
 
 //插入分享
-+ (void)insertShare:(YFMessageModel *)model andImageArray:(NSArray *)imageArray sucess:(void(^)())successBlock failure:(void(^)())failureBlock;
++ (void)insertShare:(FamilyGroup *)model andImageArray:(NSArray *)imageArray sucess:(void(^)())successBlock failure:(void(^)())failureBlock;
 @end

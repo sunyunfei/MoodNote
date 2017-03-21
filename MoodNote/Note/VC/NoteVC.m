@@ -2,8 +2,8 @@
 //  NoteVC.m
 //  MoodNote
 //
-//  Created by 孙云飞 on 2017/3/5.
-//  Copyright © 2017年 孙云飞. All rights reserved.
+//  Created by 李梦飞 on 2017/2/5.
+//  Copyright © 2017年 李梦飞. All rights reserved.
 //
 
 #import "NoteVC.h"
@@ -16,16 +16,22 @@ static NSString *photoCell = @"PhotoNoteCell";
 @interface NoteVC ()<UITableViewDelegate,UITableViewDataSource,AddNoteDelegate>
 @property(nonatomic,strong)UITableView *noteTableView;//表格
 @property(nonatomic,strong)NSMutableArray *noteArray;//数据
-- (IBAction)clickAddBtn:(id)sender;//添加日记事件
 @end
 
 @implementation NoteVC
 
+- (void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self baseLoadTitle:@"心情日记" andShowLeft:NO andShowRight:YES andreturnTitle:@"创建"];
     self.noteArray = [NSMutableArray array];
+    
     [self p_loadTableView];
-    [self p_loadNoteArray];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshDataForRoot) name:@"refreshNote" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,41 +39,8 @@ static NSString *photoCell = @"PhotoNoteCell";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark ----ui处理
-//加载表格
-- (void)p_loadTableView{
+- (void)baseRightBtn{
 
-    _noteTableView = [[UITableView alloc]initWithFrame:self.view.bounds];
-    _noteTableView.delegate = self;
-    _noteTableView.dataSource = self;
-    _noteTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_noteTableView registerNib:[UINib nibWithNibName:textCell bundle:nil] forCellReuseIdentifier:textCell];
-    [_noteTableView registerNib:[UINib nibWithNibName:photoCell bundle:nil] forCellReuseIdentifier:photoCell];
-    [self.view addSubview:_noteTableView];
-}
-
-#pragma mark----数据加载
-- (void)p_loadNoteArray{
-
-    [MBProgressHUD YFshowHUD:self.view labelText:@"数据加载中..."];
-    [self.noteArray removeAllObjects];
-    __block typeof(self)weakSelf = self;
-    [YFBmobManager queryNoteDataSuccess:^(NSMutableArray *noteArray) {
-        
-        weakSelf.noteArray = noteArray;
-        //表刷新
-        [weakSelf.noteTableView reloadData];
-        [MBProgressHUD YFhiddenHUD:weakSelf.view];
-    } failure:^{
-        
-        [MBProgressHUD YFhiddenOldHUDandShowNewHUD:weakSelf.view newText:@"数据查询失败"];
-    }];
-}
-
-#pragma mark ----事件
-//添加日记
-- (IBAction)clickAddBtn:(id)sender {
-    
     self.hidesBottomBarWhenPushed = YES;
     UIStoryboard *story = [UIStoryboard storyboardWithName:@"AddNote" bundle:nil];
     AddNote *addVC = [story instantiateViewControllerWithIdentifier:@"add"];
@@ -75,6 +48,45 @@ static NSString *photoCell = @"PhotoNoteCell";
     [self.navigationController pushViewController:addVC animated:YES];
     self.hidesBottomBarWhenPushed = NO;
 }
+#pragma mark ----ui处理
+//加载表格
+- (void)p_loadTableView{
+
+    _noteTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, screenWidth, screenHeight - 44)];
+    _noteTableView.delegate = self;
+    _noteTableView.dataSource = self;
+    _noteTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [_noteTableView registerNib:[UINib nibWithNibName:textCell bundle:nil] forCellReuseIdentifier:textCell];
+    [_noteTableView registerNib:[UINib nibWithNibName:photoCell bundle:nil] forCellReuseIdentifier:photoCell];
+    [self.view addSubview:_noteTableView];
+    
+    self.noteTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self p_loadNoteArray];
+    }];
+    
+    [self.noteTableView.mj_header beginRefreshing];
+}
+
+#pragma mark----数据加载
+- (void)p_loadNoteArray{
+
+    [self.noteArray removeAllObjects];
+    __block typeof(self)weakSelf = self;
+    [YFBmobManager queryNoteDataSuccess:^(NSMutableArray *noteArray) {
+        
+        weakSelf.noteArray = noteArray;
+        //表刷新
+        [weakSelf.noteTableView reloadData];
+        [weakSelf.noteTableView.mj_header endRefreshing];
+        
+    } failure:^{
+        
+        [weakSelf.noteTableView.mj_header endRefreshing];
+    }];
+}
+
+#pragma mark ----事件
 
 #pragma mark ----代理
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -156,6 +168,6 @@ static NSString *photoCell = @"PhotoNoteCell";
 //刷新数据
 - (void)refreshDataForRoot{
 
-    [self p_loadNoteArray];
+    [self.noteTableView.mj_header beginRefreshing];
 }
 @end

@@ -121,6 +121,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginBtn" destination="KZg-6e-Cez" id="eno-x3-QJb"/>
                         <outlet property="mobileField" destination="jv5-VL-peP" id="57W-Wr-e1V"/>
                         <outlet property="pwdField" destination="2k4-xU-UiA" id="Vcr-ck-EM6"/>
                     </connections>
@@ -264,6 +265,7 @@
                         <outlet property="codeField" destination="J0i-mw-VYh" id="VCC-id-eRc"/>
                         <outlet property="mobileField" destination="GdI-eF-REm" id="VCu-b9-mF7"/>
                         <outlet property="pwdField" destination="E0H-UN-3c3" id="Umv-Mw-p00"/>
+                        <outlet property="registerBtn" destination="5xx-es-Dhz" id="MdV-UD-T31"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHE-TK-vZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
